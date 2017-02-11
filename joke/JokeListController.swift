@@ -417,6 +417,7 @@ open class CustomDrawingActionButton: LiquidFloatingActionButton {
 extension ViewController{
     
     func edit(_ cell: FoldingCell) {
+        
     }
     func delete_(_ cell: FoldingCell) {
     }
@@ -425,7 +426,7 @@ extension ViewController{
         
         let index = self.tableView.indexPath(for: cell)?.row
         var like_or_dislike:Int!
-        (jokes[index!].like_or_not! == 1 ? (like_or_dislike = -1) : (like_or_dislike = 1))
+        (jokes[index!].like_or_not! == 1 ? (like_or_dislike = -1) : (like_or_dislike = 1)) //error at Here
         
         let configuration: URLSessionConfiguration = URLSessionConfiguration.default
         let session : URLSession = URLSession(configuration: configuration)
@@ -481,6 +482,7 @@ extension ViewController{
                                 else if(status == 501){
                                     
                                     DispatchQueue.main.async(execute: {
+                                        
                                         jokes.remove(at: index!)
                                         self.tableView.reloadData()
                                     })
