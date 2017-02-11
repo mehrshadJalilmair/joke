@@ -216,6 +216,17 @@ class EditProfile: UIViewController , UIImagePickerControllerDelegate , UINaviga
         dismiss(animated: true, completion: nil)
     }
     
+    /*func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imagePost.image = image
+        } else{
+            print("Something went wrong")
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+    }*/
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         //print(info)
