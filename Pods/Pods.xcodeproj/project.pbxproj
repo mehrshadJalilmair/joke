@@ -1,0 +1,1394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02484F77705F09152CADE10270E8AF58 /* Pods-joke-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A5568C8C828E518C340264E9ADD929 /* Pods-joke-dummy.m */; };
+		0636D820D7A28182A38DFEDD0B4265B8 /* ArrayEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FC8948DDE0A7ED139780223F186A57 /* ArrayEx.swift */; };
+		09EA826CB8175AE359208828DF08B239 /* Pods-jokeUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A731BEA50B6C52824BA93C1CF475152B /* Pods-jokeUITests-dummy.m */; };
+		0FD75AC879131D6BE6B01125615C4874 /* Pods-jokeTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 722F929F12A1D2267FB2DB93E3615584 /* Pods-jokeTests-dummy.m */; };
+		1966598572E070BAEE27F15622C5E416 /* CGPointEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CE6E308A999F8A2DDA66070DA7E388 /* CGPointEx.swift */; };
+		1C3F331F97C6F7D068BD59EB4B40BF3A /* Pods-joke-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 733DDD180D4A548F793A9A1E53D32481 /* Pods-joke-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C9AF992C79F9F46BB71E12D071A9AB7 /* FoldingCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 709B5B557317FC4734B7B4C169FFC8C3 /* FoldingCell-dummy.m */; };
+		23DD155383B16EB67FAB2C81F622298B /* Pods-jokeTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0BFBA7EE80BF2D44D12962F041C0D4 /* Pods-jokeTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B4D1FA9A9A585B6A2E496A2B87AA7C2 /* MIBadgeButton-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7567A9F316E474F5B682332D37F479 /* MIBadgeButton-Swift-dummy.m */; };
+		2D2ED9062EAF93A42E3EB1F69EDBE5AB /* Pods-jokeUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E48E6B336536378A4D6764CC10E65CC /* Pods-jokeUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B564D995F752798FE6CCD98AA10E350 /* UIColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68537DCF91F0F68C2DC5C69F8652E597 /* UIColorEx.swift */; };
+		3C5F9BB79B44B1C3416F00C84DFAE417 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		3D28228BA6376224424ABCDEB282B104 /* LiquidFloatingActionButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E85989A0992A5D6F049CC59450AD4A1A /* LiquidFloatingActionButton-dummy.m */; };
+		4C1000F3F17B2CE8D1FF2F2D1FCAE05C /* CGRectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2811A7FD018C37D5D12B0D47298E82C /* CGRectEx.swift */; };
+		4D5B1EA134D7C144E22F61ABF3F9761A /* LiquidUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C14BB837F4771458BF15BF497F5FD20 /* LiquidUtil.swift */; };
+		7D5F16F30A7738537F8CAA944B46EFEA /* SimpleCircleLiquidEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB7674E7057BD0AB3F543E272240C0B /* SimpleCircleLiquidEngine.swift */; };
+		82064AA6CBAA9676FDE6F39004F79FC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		8E859BE38BA92C345226653275CD3886 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		8FDD351C54B1F69B30DA69598B20E848 /* MIBadgeButton-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2053090C1D4D1197F2912C672B3EEEF7 /* MIBadgeButton-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93224DE4CB7E0EF0FB294A7D62277B6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		94E79B91257D5DD5F1163045AA76A872 /* LiquittableCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00F28A3DD705D70C03CAD301406C936 /* LiquittableCircle.swift */; };
+		9DAEAB5D5736D03E6798C6A5B98B492F /* LiquidFloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84AA1F56FBAC95D5ECBF2941041152B /* LiquidFloatingActionButton.swift */; };
+		A35204F9F4D4C37E593B0758A2F6292E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		A6BCC3FFF1465A36C84595E179DCD457 /* MIBadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731ED3257B8574530F7F276EC311347 /* MIBadgeButton.swift */; };
+		C0A5D393FE99D1B51E72C294FE24C7AE /* FoldingCell-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 367626232087612DEAFC0C700225248A /* FoldingCell-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C92082847357F69B25D9BDF5C6D44331 /* VBPiledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2467D9B28711CB513EEB4B0777DFA9C /* VBPiledView.swift */; };
+		CE042FBE46420EE332BAAD1DDCC39620 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		D73A174CB6F268A42EFCD43598001878 /* VBPiledView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C2384D19EF7C353CE982308582436FB /* VBPiledView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC3F17BF3A627F4DCFD2941E835682CB /* VBPiledView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 514BD37BF90A53849A4360346C9F81F2 /* VBPiledView-dummy.m */; };
+		DE1509064DF914386CCEB3FCD840628C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		E0B66BD63A377075A7987E1C00544D23 /* FoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFDDDBC0753DA94BD5C66CECA854760 /* FoldingCell.swift */; };
+		E68DB70743BA87355B6E4AC462A016BC /* LiquidFloatingActionButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 83176893D5A40F8BFE399A754E0D768F /* LiquidFloatingActionButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		76C34A777A7393DAFED0275353BA6E64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9ACE43C2FB6B935EEFAA82919071504B;
+			remoteInfo = VBPiledView;
+		};
+		AF76B04E2A0A11B599A8C2D5EEA68E6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62BDD710F761A9FAA74F4010A24BF66D;
+			remoteInfo = LiquidFloatingActionButton;
+		};
+		C6B26DF74AE6F0535D57C205905B1F63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B626E472969D6F87698AF0041EAAFC38;
+			remoteInfo = FoldingCell;
+		};
+		D3CA53E72188809110C030BA3974F903 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34E1BEE5B9151B6FF42B51C88D1AF746;
+			remoteInfo = "MIBadgeButton-Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0205A0565D038F24E9818B8E44972C03 /* Pods-joke-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-joke-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0AC56A71EF49DFF550FF1F0202EE92C4 /* MIBadgeButton_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MIBadgeButton_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C0A7072CCA326BB5A99EE554206A9B0 /* Pods-jokeTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-jokeTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		15364D58AA3208E4EC70ECDBA23F6317 /* Pods-jokeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-jokeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1956B24EFBBEF24AC5D57CA83834E7C7 /* VBPiledView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VBPiledView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19E1F4B89678E2325BC950FB8449BA9D /* Pods-joke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-joke.release.xcconfig"; sourceTree = "<group>"; };
+		2053090C1D4D1197F2912C672B3EEEF7 /* MIBadgeButton-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MIBadgeButton-Swift-umbrella.h"; sourceTree = "<group>"; };
+		225C15A44B0D3E33523BF3DE37BD3337 /* LiquidFloatingActionButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LiquidFloatingActionButton-prefix.pch"; sourceTree = "<group>"; };
+		23471D568C1E52D04D314238A3142BF2 /* FoldingCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FoldingCell-prefix.pch"; sourceTree = "<group>"; };
+		2A66B7945AD2E0E04EE7E5A7CA003071 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C14BB837F4771458BF15BF497F5FD20 /* LiquidUtil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LiquidUtil.swift; path = Pod/Classes/LiquidUtil.swift; sourceTree = "<group>"; };
+		2E48E6B336536378A4D6764CC10E65CC /* Pods-jokeUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-jokeUITests-umbrella.h"; sourceTree = "<group>"; };
+		331DAC91CE963CDEE46F7C1DCA4366B6 /* Pods-joke.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-joke.modulemap"; sourceTree = "<group>"; };
+		34E46057C711921F5911D7DE9DD3824E /* Pods-jokeUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-jokeUITests.modulemap"; sourceTree = "<group>"; };
+		35D2AED1E299EA8A8AAEE40E1CCBD355 /* Pods-joke-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-joke-acknowledgements.plist"; sourceTree = "<group>"; };
+		367626232087612DEAFC0C700225248A /* FoldingCell-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FoldingCell-umbrella.h"; sourceTree = "<group>"; };
+		3731ED3257B8574530F7F276EC311347 /* MIBadgeButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MIBadgeButton.swift; path = Classes/MIBadgeButton.swift; sourceTree = "<group>"; };
+		3B44700647C05E208CCFF29D53A1DE1E /* Pods-joke-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-joke-frameworks.sh"; sourceTree = "<group>"; };
+		3D0BFBA7EE80BF2D44D12962F041C0D4 /* Pods-jokeTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-jokeTests-umbrella.h"; sourceTree = "<group>"; };
+		4A25406F75BB5C8797B2D02BD36CBC14 /* MIBadgeButton-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "MIBadgeButton-Swift.modulemap"; sourceTree = "<group>"; };
+		4A7567A9F316E474F5B682332D37F479 /* MIBadgeButton-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MIBadgeButton-Swift-dummy.m"; sourceTree = "<group>"; };
+		514BD37BF90A53849A4360346C9F81F2 /* VBPiledView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VBPiledView-dummy.m"; sourceTree = "<group>"; };
+		56FC8948DDE0A7ED139780223F186A57 /* ArrayEx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayEx.swift; path = Pod/Classes/ArrayEx.swift; sourceTree = "<group>"; };
+		657CA44FA5FFF812530E21292683A2F9 /* LiquidFloatingActionButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LiquidFloatingActionButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		673AAAE5C23AEE472096260E4748DD02 /* Pods-jokeUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-jokeUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		68537DCF91F0F68C2DC5C69F8652E597 /* UIColorEx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColorEx.swift; path = Pod/Classes/UIColorEx.swift; sourceTree = "<group>"; };
+		6EDA4A3285E5CBDFC1C4C091065EB375 /* Pods-jokeUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-jokeUITests-frameworks.sh"; sourceTree = "<group>"; };
+		6F202F2111874A03D62EB3435334E903 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FD97D1D60B847D8BA1D0815B542161D /* LiquidFloatingActionButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LiquidFloatingActionButton.modulemap; sourceTree = "<group>"; };
+		709B5B557317FC4734B7B4C169FFC8C3 /* FoldingCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FoldingCell-dummy.m"; sourceTree = "<group>"; };
+		722F929F12A1D2267FB2DB93E3615584 /* Pods-jokeTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-jokeTests-dummy.m"; sourceTree = "<group>"; };
+		733DDD180D4A548F793A9A1E53D32481 /* Pods-joke-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-joke-umbrella.h"; sourceTree = "<group>"; };
+		73A334EEF5B229A333893C7B686FC86C /* Pods-jokeTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-jokeTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		7C2384D19EF7C353CE982308582436FB /* VBPiledView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VBPiledView-umbrella.h"; sourceTree = "<group>"; };
+		81662734A0FA0D5B031197960B3BA604 /* FoldingCell.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FoldingCell.modulemap; sourceTree = "<group>"; };
+		83176893D5A40F8BFE399A754E0D768F /* LiquidFloatingActionButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LiquidFloatingActionButton-umbrella.h"; sourceTree = "<group>"; };
+		857604FC44B4B49326E737BD8638A73B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87CE6E308A999F8A2DDA66070DA7E388 /* CGPointEx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGPointEx.swift; path = Pod/Classes/CGPointEx.swift; sourceTree = "<group>"; };
+		8853C29A322273F9F413252C23162A8F /* Pods_jokeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jokeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A02352DCE9968D8F403CC4E61856433 /* Pods-jokeTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-jokeTests-frameworks.sh"; sourceTree = "<group>"; };
+		9060F2230C29D6AAE98C89F3311F7959 /* Pods-jokeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-jokeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9447485C67FB44D7C34845E79C98A7AD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97A5568C8C828E518C340264E9ADD929 /* Pods-joke-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-joke-dummy.m"; sourceTree = "<group>"; };
+		9860A7C5F8E10BFC02BC521D50C2C98A /* FoldingCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FoldingCell.xcconfig; sourceTree = "<group>"; };
+		9980CDA30020E4EF209B0025CAE3EBF7 /* Pods-joke-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-joke-resources.sh"; sourceTree = "<group>"; };
+		9C94F6A08556ED802799360ADA590BD6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DF7BA7BC72D8282CBFA607F28E741DA /* Pods-jokeTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-jokeTests-resources.sh"; sourceTree = "<group>"; };
+		A0B2F071D838DFA978A4FF4DB799C863 /* LiquidFloatingActionButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LiquidFloatingActionButton.xcconfig; sourceTree = "<group>"; };
+		A0E739F10DF0D9A57A0163FBC7C12267 /* FoldingCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoldingCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A731BEA50B6C52824BA93C1CF475152B /* Pods-jokeUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-jokeUITests-dummy.m"; sourceTree = "<group>"; };
+		A84AA1F56FBAC95D5ECBF2941041152B /* LiquidFloatingActionButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LiquidFloatingActionButton.swift; path = Pod/Classes/LiquidFloatingActionButton.swift; sourceTree = "<group>"; };
+		AAFDDDBC0753DA94BD5C66CECA854760 /* FoldingCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoldingCell.swift; path = FoldingCell/FoldingCell/FoldingCell/FoldingCell.swift; sourceTree = "<group>"; };
+		B2467D9B28711CB513EEB4B0777DFA9C /* VBPiledView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VBPiledView.swift; path = VBPiledView/VBPiledView/VBPiledView.swift; sourceTree = "<group>"; };
+		B80AC2EE1544077EE15CA6E6054075BC /* VBPiledView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VBPiledView.xcconfig; sourceTree = "<group>"; };
+		B85811F7DEB1FEA7864CA230971D8916 /* MIBadgeButton-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MIBadgeButton-Swift-prefix.pch"; sourceTree = "<group>"; };
+		B8AB2C8361FB3D24B44B7B85AAD49834 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBB7674E7057BD0AB3F543E272240C0B /* SimpleCircleLiquidEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimpleCircleLiquidEngine.swift; path = Pod/Classes/SimpleCircleLiquidEngine.swift; sourceTree = "<group>"; };
+		BE78151A0240D6DBA7F0C057E4137EED /* VBPiledView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = VBPiledView.modulemap; sourceTree = "<group>"; };
+		BED03085FA03F45432BAA407B4D25694 /* VBPiledView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VBPiledView-prefix.pch"; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D29BD419A0816DD79C17FAB962BE2D74 /* MIBadgeButton-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "MIBadgeButton-Swift.xcconfig"; sourceTree = "<group>"; };
+		D4B50C082A0B5577787BF8799F2DE4FF /* Pods-jokeUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-jokeUITests-resources.sh"; sourceTree = "<group>"; };
+		DB55AF245B27527BDB0BAEB02210A37B /* Pods-jokeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-jokeTests.modulemap"; sourceTree = "<group>"; };
+		DC0ECFF9679B45BCE90A497E99D1F275 /* Pods-jokeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-jokeTests.release.xcconfig"; sourceTree = "<group>"; };
+		E85989A0992A5D6F049CC59450AD4A1A /* LiquidFloatingActionButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LiquidFloatingActionButton-dummy.m"; sourceTree = "<group>"; };
+		E91AE16E5F761CB5114C9DB746CEA050 /* Pods-jokeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-jokeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE85F8DA70C498C7BC32969DADD44894 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F00F28A3DD705D70C03CAD301406C936 /* LiquittableCircle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LiquittableCircle.swift; path = Pod/Classes/LiquittableCircle.swift; sourceTree = "<group>"; };
+		F08616B309D7472C3D0DA851C4E9693B /* Pods_joke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_joke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0BED423A5AAFB92A33DA3D6AF6EFFF0 /* Pods-jokeUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-jokeUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F2811A7FD018C37D5D12B0D47298E82C /* CGRectEx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGRectEx.swift; path = Pod/Classes/CGRectEx.swift; sourceTree = "<group>"; };
+		F30142066A4E15302562B8CD387D516F /* Pods-joke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-joke.debug.xcconfig"; sourceTree = "<group>"; };
+		F79E1118D16EEE356F1826DC459AD98D /* Pods_jokeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jokeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		088BC17434FFF2876CE3BF1E6690305D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E859BE38BA92C345226653275CD3886 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D3F6868F63FB4E889F57C6D4052B0CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE1509064DF914386CCEB3FCD840628C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BC463B8C6429439E6EA4047F25508BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C5F9BB79B44B1C3416F00C84DFAE417 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DB7D0D56107AEB73B9C575B53DA46F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93224DE4CB7E0EF0FB294A7D62277B6A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58CA7EAE9408470A70F69038524D2207 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82064AA6CBAA9676FDE6F39004F79FC6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C7E368F6B9F52E601E79023E00B3873 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A35204F9F4D4C37E593B0758A2F6292E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDEE08711DCC695660DE63B66C8B970F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE042FBE46420EE332BAAD1DDCC39620 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		104D613FDFA35928797B42D336DF9239 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2A66B7945AD2E0E04EE7E5A7CA003071 /* Info.plist */,
+				6FD97D1D60B847D8BA1D0815B542161D /* LiquidFloatingActionButton.modulemap */,
+				A0B2F071D838DFA978A4FF4DB799C863 /* LiquidFloatingActionButton.xcconfig */,
+				E85989A0992A5D6F049CC59450AD4A1A /* LiquidFloatingActionButton-dummy.m */,
+				225C15A44B0D3E33523BF3DE37BD3337 /* LiquidFloatingActionButton-prefix.pch */,
+				83176893D5A40F8BFE399A754E0D768F /* LiquidFloatingActionButton-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LiquidFloatingActionButton";
+			sourceTree = "<group>";
+		};
+		1993431A9787F6992A641FB99F01DD98 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				81662734A0FA0D5B031197960B3BA604 /* FoldingCell.modulemap */,
+				9860A7C5F8E10BFC02BC521D50C2C98A /* FoldingCell.xcconfig */,
+				709B5B557317FC4734B7B4C169FFC8C3 /* FoldingCell-dummy.m */,
+				23471D568C1E52D04D314238A3142BF2 /* FoldingCell-prefix.pch */,
+				367626232087612DEAFC0C700225248A /* FoldingCell-umbrella.h */,
+				B8AB2C8361FB3D24B44B7B85AAD49834 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FoldingCell";
+			sourceTree = "<group>";
+		};
+		2287240FFFB25AC017613F2EAF349B6D /* Pods-jokeTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C94F6A08556ED802799360ADA590BD6 /* Info.plist */,
+				DB55AF245B27527BDB0BAEB02210A37B /* Pods-jokeTests.modulemap */,
+				0C0A7072CCA326BB5A99EE554206A9B0 /* Pods-jokeTests-acknowledgements.markdown */,
+				73A334EEF5B229A333893C7B686FC86C /* Pods-jokeTests-acknowledgements.plist */,
+				722F929F12A1D2267FB2DB93E3615584 /* Pods-jokeTests-dummy.m */,
+				8A02352DCE9968D8F403CC4E61856433 /* Pods-jokeTests-frameworks.sh */,
+				9DF7BA7BC72D8282CBFA607F28E741DA /* Pods-jokeTests-resources.sh */,
+				3D0BFBA7EE80BF2D44D12962F041C0D4 /* Pods-jokeTests-umbrella.h */,
+				15364D58AA3208E4EC70ECDBA23F6317 /* Pods-jokeTests.debug.xcconfig */,
+				DC0ECFF9679B45BCE90A497E99D1F275 /* Pods-jokeTests.release.xcconfig */,
+			);
+			name = "Pods-jokeTests";
+			path = "Target Support Files/Pods-jokeTests";
+			sourceTree = "<group>";
+		};
+		30940BD9D27896C57901B0D6EA4E497B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0E739F10DF0D9A57A0163FBC7C12267 /* FoldingCell.framework */,
+				657CA44FA5FFF812530E21292683A2F9 /* LiquidFloatingActionButton.framework */,
+				0AC56A71EF49DFF550FF1F0202EE92C4 /* MIBadgeButton_Swift.framework */,
+				F08616B309D7472C3D0DA851C4E9693B /* Pods_joke.framework */,
+				8853C29A322273F9F413252C23162A8F /* Pods_jokeTests.framework */,
+				F79E1118D16EEE356F1826DC459AD98D /* Pods_jokeUITests.framework */,
+				1956B24EFBBEF24AC5D57CA83834E7C7 /* VBPiledView.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		34253641C5374BC019004CF080B23471 /* Pods-jokeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6F202F2111874A03D62EB3435334E903 /* Info.plist */,
+				34E46057C711921F5911D7DE9DD3824E /* Pods-jokeUITests.modulemap */,
+				F0BED423A5AAFB92A33DA3D6AF6EFFF0 /* Pods-jokeUITests-acknowledgements.markdown */,
+				673AAAE5C23AEE472096260E4748DD02 /* Pods-jokeUITests-acknowledgements.plist */,
+				A731BEA50B6C52824BA93C1CF475152B /* Pods-jokeUITests-dummy.m */,
+				6EDA4A3285E5CBDFC1C4C091065EB375 /* Pods-jokeUITests-frameworks.sh */,
+				D4B50C082A0B5577787BF8799F2DE4FF /* Pods-jokeUITests-resources.sh */,
+				2E48E6B336536378A4D6764CC10E65CC /* Pods-jokeUITests-umbrella.h */,
+				E91AE16E5F761CB5114C9DB746CEA050 /* Pods-jokeUITests.debug.xcconfig */,
+				9060F2230C29D6AAE98C89F3311F7959 /* Pods-jokeUITests.release.xcconfig */,
+			);
+			name = "Pods-jokeUITests";
+			path = "Target Support Files/Pods-jokeUITests";
+			sourceTree = "<group>";
+		};
+		45521B2F7DDEA84B0657989ABB86B5EA /* VBPiledView */ = {
+			isa = PBXGroup;
+			children = (
+				B2467D9B28711CB513EEB4B0777DFA9C /* VBPiledView.swift */,
+				57CCB725EF24C8A46667506506A182DD /* Support Files */,
+			);
+			path = VBPiledView;
+			sourceTree = "<group>";
+		};
+		53276F39A99A94E11D39A524673B699D /* FoldingCell */ = {
+			isa = PBXGroup;
+			children = (
+				AAFDDDBC0753DA94BD5C66CECA854760 /* FoldingCell.swift */,
+				1993431A9787F6992A641FB99F01DD98 /* Support Files */,
+			);
+			path = FoldingCell;
+			sourceTree = "<group>";
+		};
+		57CCB725EF24C8A46667506506A182DD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE85F8DA70C498C7BC32969DADD44894 /* Info.plist */,
+				BE78151A0240D6DBA7F0C057E4137EED /* VBPiledView.modulemap */,
+				B80AC2EE1544077EE15CA6E6054075BC /* VBPiledView.xcconfig */,
+				514BD37BF90A53849A4360346C9F81F2 /* VBPiledView-dummy.m */,
+				BED03085FA03F45432BAA407B4D25694 /* VBPiledView-prefix.pch */,
+				7C2384D19EF7C353CE982308582436FB /* VBPiledView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/VBPiledView";
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				ED61A7B1ED6DE674CDA6D8524773A2DA /* Pods */,
+				30940BD9D27896C57901B0D6EA4E497B /* Products */,
+				D3FAE85FB92A258C21C896E8A59DF092 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		B0E3D82783BC735EABBEEDE831BB13E2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9447485C67FB44D7C34845E79C98A7AD /* Info.plist */,
+				4A25406F75BB5C8797B2D02BD36CBC14 /* MIBadgeButton-Swift.modulemap */,
+				D29BD419A0816DD79C17FAB962BE2D74 /* MIBadgeButton-Swift.xcconfig */,
+				4A7567A9F316E474F5B682332D37F479 /* MIBadgeButton-Swift-dummy.m */,
+				B85811F7DEB1FEA7864CA230971D8916 /* MIBadgeButton-Swift-prefix.pch */,
+				2053090C1D4D1197F2912C672B3EEEF7 /* MIBadgeButton-Swift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MIBadgeButton-Swift";
+			sourceTree = "<group>";
+		};
+		B2657528EDD992887EFA5E23323960FA /* LiquidFloatingActionButton */ = {
+			isa = PBXGroup;
+			children = (
+				56FC8948DDE0A7ED139780223F186A57 /* ArrayEx.swift */,
+				87CE6E308A999F8A2DDA66070DA7E388 /* CGPointEx.swift */,
+				F2811A7FD018C37D5D12B0D47298E82C /* CGRectEx.swift */,
+				A84AA1F56FBAC95D5ECBF2941041152B /* LiquidFloatingActionButton.swift */,
+				2C14BB837F4771458BF15BF497F5FD20 /* LiquidUtil.swift */,
+				F00F28A3DD705D70C03CAD301406C936 /* LiquittableCircle.swift */,
+				BBB7674E7057BD0AB3F543E272240C0B /* SimpleCircleLiquidEngine.swift */,
+				68537DCF91F0F68C2DC5C69F8652E597 /* UIColorEx.swift */,
+				104D613FDFA35928797B42D336DF9239 /* Support Files */,
+			);
+			path = LiquidFloatingActionButton;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2C2558793B59DA560627D28FE0B643D /* MIBadgeButton-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				3731ED3257B8574530F7F276EC311347 /* MIBadgeButton.swift */,
+				B0E3D82783BC735EABBEEDE831BB13E2 /* Support Files */,
+			);
+			path = "MIBadgeButton-Swift";
+			sourceTree = "<group>";
+		};
+		D3FAE85FB92A258C21C896E8A59DF092 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB6DF0109B7AD499C6B5960BD801B583 /* Pods-joke */,
+				2287240FFFB25AC017613F2EAF349B6D /* Pods-jokeTests */,
+				34253641C5374BC019004CF080B23471 /* Pods-jokeUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		EB6DF0109B7AD499C6B5960BD801B583 /* Pods-joke */ = {
+			isa = PBXGroup;
+			children = (
+				857604FC44B4B49326E737BD8638A73B /* Info.plist */,
+				331DAC91CE963CDEE46F7C1DCA4366B6 /* Pods-joke.modulemap */,
+				0205A0565D038F24E9818B8E44972C03 /* Pods-joke-acknowledgements.markdown */,
+				35D2AED1E299EA8A8AAEE40E1CCBD355 /* Pods-joke-acknowledgements.plist */,
+				97A5568C8C828E518C340264E9ADD929 /* Pods-joke-dummy.m */,
+				3B44700647C05E208CCFF29D53A1DE1E /* Pods-joke-frameworks.sh */,
+				9980CDA30020E4EF209B0025CAE3EBF7 /* Pods-joke-resources.sh */,
+				733DDD180D4A548F793A9A1E53D32481 /* Pods-joke-umbrella.h */,
+				F30142066A4E15302562B8CD387D516F /* Pods-joke.debug.xcconfig */,
+				19E1F4B89678E2325BC950FB8449BA9D /* Pods-joke.release.xcconfig */,
+			);
+			name = "Pods-joke";
+			path = "Target Support Files/Pods-joke";
+			sourceTree = "<group>";
+		};
+		ED61A7B1ED6DE674CDA6D8524773A2DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53276F39A99A94E11D39A524673B699D /* FoldingCell */,
+				B2657528EDD992887EFA5E23323960FA /* LiquidFloatingActionButton */,
+				D2C2558793B59DA560627D28FE0B643D /* MIBadgeButton-Swift */,
+				45521B2F7DDEA84B0657989ABB86B5EA /* VBPiledView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		21A906C5C02E549F9F8692CE0A56F43B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0A5D393FE99D1B51E72C294FE24C7AE /* FoldingCell-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A69390296D4367650D500ED26EA3359 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23DD155383B16EB67FAB2C81F622298B /* Pods-jokeTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38976E81B1908FA972C6779CC6DA05B6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D2ED9062EAF93A42E3EB1F69EDBE5AB /* Pods-jokeUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B13B8120B78DEC7346042B9E46CF0D2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C3F331F97C6F7D068BD59EB4B40BF3A /* Pods-joke-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B14ECF429FDCB7715C1B05CBBA6A680 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D73A174CB6F268A42EFCD43598001878 /* VBPiledView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC3C77FAD16E6003F28FFA2B03779B97 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E68DB70743BA87355B6E4AC462A016BC /* LiquidFloatingActionButton-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE174E091A02FFCD7AC614739431E492 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FDD351C54B1F69B30DA69598B20E848 /* MIBadgeButton-Swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1DD98BE323E21C5475B2076020BCCFBB /* Pods-joke */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D9136BEBFAD74BA1A808710437739FD /* Build configuration list for PBXNativeTarget "Pods-joke" */;
+			buildPhases = (
+				8FF31155E27B427ABAF0DF245304F772 /* Sources */,
+				0D3F6868F63FB4E889F57C6D4052B0CF /* Frameworks */,
+				6B13B8120B78DEC7346042B9E46CF0D2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D924D9BCCD180D66DDEB642B500667BF /* PBXTargetDependency */,
+				5B328C20A3CA20A39DF52AA095A29762 /* PBXTargetDependency */,
+				D8A537E285D68C26ACEFA494F462B9E7 /* PBXTargetDependency */,
+				81FB1BC2B7851C6E1D84F505153A6E73 /* PBXTargetDependency */,
+			);
+			name = "Pods-joke";
+			productName = "Pods-joke";
+			productReference = F08616B309D7472C3D0DA851C4E9693B /* Pods_joke.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		34E1BEE5B9151B6FF42B51C88D1AF746 /* MIBadgeButton-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFE7695F5B026F06CD316C4E5924453D /* Build configuration list for PBXNativeTarget "MIBadgeButton-Swift" */;
+			buildPhases = (
+				DE71D7545C915DC1103E43EE6C34774F /* Sources */,
+				BDEE08711DCC695660DE63B66C8B970F /* Frameworks */,
+				FE174E091A02FFCD7AC614739431E492 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MIBadgeButton-Swift";
+			productName = "MIBadgeButton-Swift";
+			productReference = 0AC56A71EF49DFF550FF1F0202EE92C4 /* MIBadgeButton_Swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5B5F3F03A06FF86E2F66FAB2C8CEFFCA /* Pods-jokeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 386661A2BF49F6D0F5547D4BA20B285B /* Build configuration list for PBXNativeTarget "Pods-jokeUITests" */;
+			buildPhases = (
+				BE12B902E6F7627C9B7200927F612F6F /* Sources */,
+				58CA7EAE9408470A70F69038524D2207 /* Frameworks */,
+				38976E81B1908FA972C6779CC6DA05B6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-jokeUITests";
+			productName = "Pods-jokeUITests";
+			productReference = F79E1118D16EEE356F1826DC459AD98D /* Pods_jokeUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		62BDD710F761A9FAA74F4010A24BF66D /* LiquidFloatingActionButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93F43E9852D375D854EE45AD31D76292 /* Build configuration list for PBXNativeTarget "LiquidFloatingActionButton" */;
+			buildPhases = (
+				2C32FB457251894479DE0F3DD687FC53 /* Sources */,
+				088BC17434FFF2876CE3BF1E6690305D /* Frameworks */,
+				CC3C77FAD16E6003F28FFA2B03779B97 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LiquidFloatingActionButton;
+			productName = LiquidFloatingActionButton;
+			productReference = 657CA44FA5FFF812530E21292683A2F9 /* LiquidFloatingActionButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		83CC50CEA3E78D137ADA9B459B6E96E8 /* Pods-jokeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0A8CF1ACBABDE8B99E1E45873580DD3 /* Build configuration list for PBXNativeTarget "Pods-jokeTests" */;
+			buildPhases = (
+				C6AAFEDA97E6E0DC1B96641DBC3BA4B8 /* Sources */,
+				7C7E368F6B9F52E601E79023E00B3873 /* Frameworks */,
+				2A69390296D4367650D500ED26EA3359 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-jokeTests";
+			productName = "Pods-jokeTests";
+			productReference = 8853C29A322273F9F413252C23162A8F /* Pods_jokeTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9ACE43C2FB6B935EEFAA82919071504B /* VBPiledView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 793B1A5470AC192B4224765F9BC5FD4D /* Build configuration list for PBXNativeTarget "VBPiledView" */;
+			buildPhases = (
+				9380B43549C7AD6E9BEB1DAAF3EC8477 /* Sources */,
+				3BC463B8C6429439E6EA4047F25508BD /* Frameworks */,
+				9B14ECF429FDCB7715C1B05CBBA6A680 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VBPiledView;
+			productName = VBPiledView;
+			productReference = 1956B24EFBBEF24AC5D57CA83834E7C7 /* VBPiledView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B626E472969D6F87698AF0041EAAFC38 /* FoldingCell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5E52972EF33CE3CB7D4D997DA9EA71A /* Build configuration list for PBXNativeTarget "FoldingCell" */;
+			buildPhases = (
+				C7CB2C7035BBEB0B87DC77599F23895D /* Sources */,
+				4DB7D0D56107AEB73B9C575B53DA46F5 /* Frameworks */,
+				21A906C5C02E549F9F8692CE0A56F43B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FoldingCell;
+			productName = FoldingCell;
+			productReference = A0E739F10DF0D9A57A0163FBC7C12267 /* FoldingCell.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					1DD98BE323E21C5475B2076020BCCFBB = {
+						LastSwiftMigration = 0820;
+					};
+					34E1BEE5B9151B6FF42B51C88D1AF746 = {
+						LastSwiftMigration = 0820;
+					};
+					62BDD710F761A9FAA74F4010A24BF66D = {
+						LastSwiftMigration = 0820;
+					};
+					9ACE43C2FB6B935EEFAA82919071504B = {
+						LastSwiftMigration = 0820;
+					};
+					B626E472969D6F87698AF0041EAAFC38 = {
+						LastSwiftMigration = 0820;
+					};
+				};
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 30940BD9D27896C57901B0D6EA4E497B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B626E472969D6F87698AF0041EAAFC38 /* FoldingCell */,
+				62BDD710F761A9FAA74F4010A24BF66D /* LiquidFloatingActionButton */,
+				34E1BEE5B9151B6FF42B51C88D1AF746 /* MIBadgeButton-Swift */,
+				1DD98BE323E21C5475B2076020BCCFBB /* Pods-joke */,
+				83CC50CEA3E78D137ADA9B459B6E96E8 /* Pods-jokeTests */,
+				5B5F3F03A06FF86E2F66FAB2C8CEFFCA /* Pods-jokeUITests */,
+				9ACE43C2FB6B935EEFAA82919071504B /* VBPiledView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C32FB457251894479DE0F3DD687FC53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0636D820D7A28182A38DFEDD0B4265B8 /* ArrayEx.swift in Sources */,
+				1966598572E070BAEE27F15622C5E416 /* CGPointEx.swift in Sources */,
+				4C1000F3F17B2CE8D1FF2F2D1FCAE05C /* CGRectEx.swift in Sources */,
+				3D28228BA6376224424ABCDEB282B104 /* LiquidFloatingActionButton-dummy.m in Sources */,
+				9DAEAB5D5736D03E6798C6A5B98B492F /* LiquidFloatingActionButton.swift in Sources */,
+				4D5B1EA134D7C144E22F61ABF3F9761A /* LiquidUtil.swift in Sources */,
+				94E79B91257D5DD5F1163045AA76A872 /* LiquittableCircle.swift in Sources */,
+				7D5F16F30A7738537F8CAA944B46EFEA /* SimpleCircleLiquidEngine.swift in Sources */,
+				3B564D995F752798FE6CCD98AA10E350 /* UIColorEx.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FF31155E27B427ABAF0DF245304F772 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02484F77705F09152CADE10270E8AF58 /* Pods-joke-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9380B43549C7AD6E9BEB1DAAF3EC8477 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC3F17BF3A627F4DCFD2941E835682CB /* VBPiledView-dummy.m in Sources */,
+				C92082847357F69B25D9BDF5C6D44331 /* VBPiledView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE12B902E6F7627C9B7200927F612F6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09EA826CB8175AE359208828DF08B239 /* Pods-jokeUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6AAFEDA97E6E0DC1B96641DBC3BA4B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FD75AC879131D6BE6B01125615C4874 /* Pods-jokeTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7CB2C7035BBEB0B87DC77599F23895D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C9AF992C79F9F46BB71E12D071A9AB7 /* FoldingCell-dummy.m in Sources */,
+				E0B66BD63A377075A7987E1C00544D23 /* FoldingCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE71D7545C915DC1103E43EE6C34774F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B4D1FA9A9A585B6A2E496A2B87AA7C2 /* MIBadgeButton-Swift-dummy.m in Sources */,
+				A6BCC3FFF1465A36C84595E179DCD457 /* MIBadgeButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B328C20A3CA20A39DF52AA095A29762 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LiquidFloatingActionButton;
+			target = 62BDD710F761A9FAA74F4010A24BF66D /* LiquidFloatingActionButton */;
+			targetProxy = AF76B04E2A0A11B599A8C2D5EEA68E6E /* PBXContainerItemProxy */;
+		};
+		81FB1BC2B7851C6E1D84F505153A6E73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VBPiledView;
+			target = 9ACE43C2FB6B935EEFAA82919071504B /* VBPiledView */;
+			targetProxy = 76C34A777A7393DAFED0275353BA6E64 /* PBXContainerItemProxy */;
+		};
+		D8A537E285D68C26ACEFA494F462B9E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "MIBadgeButton-Swift";
+			target = 34E1BEE5B9151B6FF42B51C88D1AF746 /* MIBadgeButton-Swift */;
+			targetProxy = D3CA53E72188809110C030BA3974F903 /* PBXContainerItemProxy */;
+		};
+		D924D9BCCD180D66DDEB642B500667BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FoldingCell;
+			target = B626E472969D6F87698AF0041EAAFC38 /* FoldingCell */;
+			targetProxy = C6B26DF74AE6F0535D57C205905B1F63 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		18BCA449BB77732E97E67C810D3789B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9860A7C5F8E10BFC02BC521D50C2C98A /* FoldingCell.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FoldingCell/FoldingCell-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FoldingCell/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FoldingCell/FoldingCell.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = FoldingCell;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3026B8091F0B0830F195C50C1C9A0853 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B80AC2EE1544077EE15CA6E6054075BC /* VBPiledView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/VBPiledView/VBPiledView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VBPiledView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VBPiledView/VBPiledView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = VBPiledView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4A51BE17B53F3B0F5DBB4221FD8E3BF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9060F2230C29D6AAE98C89F3311F7959 /* Pods-jokeUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-jokeUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-jokeUITests/Pods-jokeUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_jokeUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		53CDEFE92492D928125B7FF0CC850BDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9860A7C5F8E10BFC02BC521D50C2C98A /* FoldingCell.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FoldingCell/FoldingCell-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FoldingCell/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FoldingCell/FoldingCell.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = FoldingCell;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		55972277B114F8815A9D4698FA1A1A35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19E1F4B89678E2325BC950FB8449BA9D /* Pods-joke.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-joke/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-joke/Pods-joke.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_joke;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5FC59A4235026963C10774A7C9B116E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15364D58AA3208E4EC70ECDBA23F6317 /* Pods-jokeTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-jokeTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-jokeTests/Pods-jokeTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_jokeTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6B237E0C61D6441A5D239CFEBB9D0F6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B80AC2EE1544077EE15CA6E6054075BC /* VBPiledView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/VBPiledView/VBPiledView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VBPiledView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VBPiledView/VBPiledView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = VBPiledView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		70D36FA7F34C8AAA2887246EBB225075 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC0ECFF9679B45BCE90A497E99D1F275 /* Pods-jokeTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-jokeTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-jokeTests/Pods-jokeTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_jokeTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		714E2EEBC2BEAE7417B02DFAB2D3C4EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E91AE16E5F761CB5114C9DB746CEA050 /* Pods-jokeUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-jokeUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-jokeUITests/Pods-jokeUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_jokeUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		76A01BCD8EAE750AB1AC2F4290821193 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F30142066A4E15302562B8CD387D516F /* Pods-joke.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-joke/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-joke/Pods-joke.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_joke;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7E2C21E0F736CAF8E146527BFE84D2B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B2F071D838DFA978A4FF4DB799C863 /* LiquidFloatingActionButton.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LiquidFloatingActionButton/LiquidFloatingActionButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LiquidFloatingActionButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LiquidFloatingActionButton/LiquidFloatingActionButton.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = LiquidFloatingActionButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D8C0C3F31AC4C0D90921CC7B693C9445 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D29BD419A0816DD79C17FAB962BE2D74 /* MIBadgeButton-Swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MIBadgeButton-Swift/MIBadgeButton-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MIBadgeButton-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MIBadgeButton-Swift/MIBadgeButton-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MIBadgeButton_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F707CAAB758C9BAD1C34428C995DEC7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D29BD419A0816DD79C17FAB962BE2D74 /* MIBadgeButton-Swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MIBadgeButton-Swift/MIBadgeButton-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MIBadgeButton-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MIBadgeButton-Swift/MIBadgeButton-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MIBadgeButton_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F8DCF285B93BC0BF10BE67641B9DD11B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B2F071D838DFA978A4FF4DB799C863 /* LiquidFloatingActionButton.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LiquidFloatingActionButton/LiquidFloatingActionButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LiquidFloatingActionButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LiquidFloatingActionButton/LiquidFloatingActionButton.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = LiquidFloatingActionButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
+				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		386661A2BF49F6D0F5547D4BA20B285B /* Build configuration list for PBXNativeTarget "Pods-jokeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				714E2EEBC2BEAE7417B02DFAB2D3C4EB /* Debug */,
+				4A51BE17B53F3B0F5DBB4221FD8E3BF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		793B1A5470AC192B4224765F9BC5FD4D /* Build configuration list for PBXNativeTarget "VBPiledView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3026B8091F0B0830F195C50C1C9A0853 /* Debug */,
+				6B237E0C61D6441A5D239CFEBB9D0F6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93F43E9852D375D854EE45AD31D76292 /* Build configuration list for PBXNativeTarget "LiquidFloatingActionButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8DCF285B93BC0BF10BE67641B9DD11B /* Debug */,
+				7E2C21E0F736CAF8E146527BFE84D2B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D9136BEBFAD74BA1A808710437739FD /* Build configuration list for PBXNativeTarget "Pods-joke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76A01BCD8EAE750AB1AC2F4290821193 /* Debug */,
+				55972277B114F8815A9D4698FA1A1A35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0A8CF1ACBABDE8B99E1E45873580DD3 /* Build configuration list for PBXNativeTarget "Pods-jokeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FC59A4235026963C10774A7C9B116E2 /* Debug */,
+				70D36FA7F34C8AAA2887246EBB225075 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5E52972EF33CE3CB7D4D997DA9EA71A /* Build configuration list for PBXNativeTarget "FoldingCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53CDEFE92492D928125B7FF0CC850BDC /* Debug */,
+				18BCA449BB77732E97E67C810D3789B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFE7695F5B026F06CD316C4E5924453D /* Build configuration list for PBXNativeTarget "MIBadgeButton-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F707CAAB758C9BAD1C34428C995DEC7D /* Debug */,
+				D8C0C3F31AC4C0D90921CC7B693C9445 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
