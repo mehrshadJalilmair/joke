@@ -476,6 +476,8 @@ extension ViewController{
                                             defaults.set("-1" , forKey: "like_\(jokes[index!]._id!)_\(currentUser._id!)")
                                             defaults.synchronize()
                                         }
+                                        
+                                        //error at Here
                                         self.tableView.reloadRows(at: [self.tableView.indexPath(for: cell)!], with: UITableViewRowAnimation.fade)
                                     })
                                 }
