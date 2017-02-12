@@ -97,12 +97,12 @@ class LoginRegister: UIViewController , UIImagePickerControllerDelegate , UINavi
         
         if username == "" || NSString(string : username).length > 15 || NSString(string : username).length < 3// || !selectedImage
         {
-            self.errorDisplay.text = "Incorrect Username format!"
+            self.errorDisplay.text = "حداقل سه کاراکتر!"
             return
         }
         else if !validEmail(email) || email == ""
         {
-            self.errorDisplay.text = "Incorrect Email format!"
+            self.errorDisplay.text = "فرمت ایمیل صحیح نیست!"
             return
         }
         
@@ -227,12 +227,12 @@ class LoginRegister: UIViewController , UIImagePickerControllerDelegate , UINavi
         
         if username == "" || NSString(string : username).length > 15 || NSString(string : username).length < 3// || !selectedImage
         {
-            self.errorDisplay.text = "Incorrect Username format!"
+            self.errorDisplay.text = "حداقل سه کاراکتر!"
             return
         }
         else if !validEmail(email) || email == ""
         {
-            self.errorDisplay.text = "Incorrect Email format!"
+            self.errorDisplay.text = "فرمت ایمیل صحیح نیست!"
             return
         }
         

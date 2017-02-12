@@ -25,8 +25,8 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
     var cells: [LiquidFloatingCell] = []
     var bottomRightButton: LiquidFloatingActionButton!
     
-    let kCloseCellHeight: CGFloat = 260
-    let kOpenCellHeight: CGFloat = 290
+    let kCloseCellHeight: CGFloat = 315
+    let kOpenCellHeight: CGFloat = 320
     var cellHeights = [CGFloat]()
     
     @IBOutlet weak var tableView: UITableView!
@@ -111,7 +111,7 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        if jokes.count < 3
+        if jokes.count < 2
         {
             return
         }
@@ -201,7 +201,7 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
         //print("newJoke")
         let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let content = storyboard.instantiateViewController(withIdentifier: "addJoke")
-        let partialModal: EMPartialModalViewController = EMPartialModalViewController(rootViewController: content, contentHeight: self.view.bounds.height - 200)
+        let partialModal: EMPartialModalViewController = EMPartialModalViewController(rootViewController: content, contentHeight: self.view.bounds.height - 100)
         
         self.present(partialModal, animated: true)
         {

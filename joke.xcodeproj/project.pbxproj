@@ -705,11 +705,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Crux Tech Ltd (BJ9VCS422A)";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Crux Tech Ltd (BJ9VCS422A)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = BJ9VCS422A;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = joke/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mfMJM.joke;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mfMJM.firstIdea.joke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "joke-Bridging-Header.h";
@@ -727,11 +728,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Crux Tech Ltd (BJ9VCS422A)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = BJ9VCS422A;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = joke/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mfMJM.joke;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mfMJM.firstIdea.joke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "joke-Bridging-Header.h";

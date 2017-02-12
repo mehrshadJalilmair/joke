@@ -94,7 +94,7 @@ class EditProfile: UIViewController , UIImagePickerControllerDelegate , UINaviga
         
         if username == "" || NSString(string : username).length > 15 || NSString(string : username).length < 3// || !selectedImage
         {
-            self.errorDisplay.text = "Incorrect Username format!"
+            self.errorDisplay.text = "حداقل سه کاراکتر!"
             return
         }
         

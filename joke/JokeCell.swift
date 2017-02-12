@@ -43,9 +43,10 @@ class JokeCell: FoldingCell {
     @IBOutlet weak var favoriteBtn: UIButton!
     @IBOutlet weak var fullJokeText: UITextView!
     @IBOutlet weak var JokeText: UILabel!
-    @IBOutlet weak var Date: UILabel!
+    @IBOutlet weak var _Date: UILabel!
     @IBOutlet weak var editBtn: UIButton!
     @IBOutlet weak var deleteBtn: UIButton!
+    @IBOutlet weak var jokeImage: UIImageView!
     
     let defaults = UserDefaults.standard
     
@@ -71,16 +72,85 @@ class JokeCell: FoldingCell {
         background.bringSubview(toFront: jokeOwnerImage)
         background.bringSubview(toFront: shareImage)
         background.bringSubview(toFront: jokeOwnerUserName)
-        background.bringSubview(toFront: Date)
+        background.bringSubview(toFront: _Date)
+        background.bringSubview(toFront: JokeText)
+        foregroundContainerView.bringSubview(toFront: JokeText)
         
         jokeOwnerUserName.text! = (joke.writer_name as! String)
         //jokeOwnerImage.image = UIImage(named: "")
         JokeText.text! = (joke.text as! String)
         
-        var date = NSString(string: (joke.date as! String))
+        //print(joke.date!)
+        /*var date = NSString(string: (joke.date as! String))
         date = date.substring(with: NSRange( location: 0 , length: 24)) as NSString
+        //date = "\(date) +0000" as NSString*/
+        let now = Date()
+        let nowcalendar = Calendar.current
+        
+        let year = nowcalendar.component(.year, from: now)
+        let month = nowcalendar.component(.month, from: now)
+        let day = nowcalendar.component(.day, from: now)
+        let hour = nowcalendar.component(.hour, from: now)
+        let min = nowcalendar.component(.minute, from: now)
+        let sec = nowcalendar.component(.second, from: now)
+        
+        let nowDate = "\(year)-\((month < 10 ? "0\(month)" : "\(month)"))-\((day < 10 ? "0\(day)" : "\(day)")) \((hour < 10 ? "0\(hour)" : "\(hour)")):\((min < 10 ? "0\(min)" : "\(min)")):\((sec < 10 ? "0\(sec)" : "\(sec)"))"
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        //dateFormatter.locale = Locale.init(identifier: "en_GB")
+        let dateObj = dateFormatter.date(from: joke.date!)
+        let nowObj = dateFormatter.date(from: nowDate)
+        
+        let calendar = NSCalendar.current as NSCalendar
+        
+        //let date2 = calendar.startOfDay(for: nowObj!)
+        //let date1 = calendar.startOfDay(for: dateObj!)
+        var unitFlags = NSCalendar.Unit.year
+        //let yearcomponents = calendar.components(unitFlags, from: date1, to: date2 , options: [])
+        
+        unitFlags = NSCalendar.Unit.month
+        let monthcomponents = calendar.components(unitFlags, from: dateObj!, to: nowObj! , options: [])
+        
+        unitFlags = NSCalendar.Unit.day
+        let daycomponents = calendar.components(unitFlags, from: dateObj!, to: nowObj! , options: [])
+        
+        unitFlags = NSCalendar.Unit.hour
+        let hourcomponents = calendar.components(unitFlags, from: dateObj!, to: nowObj! , options: [])
+        
+        unitFlags = NSCalendar.Unit.minute
+        let minutecomponents = calendar.components(unitFlags, from: dateObj!, to: nowObj! , options: [])
+        
+        unitFlags = NSCalendar.Unit.second
+        let secondcomponents = calendar.components(unitFlags, from: dateObj!, to: nowObj! , options: [])
+
+        
+        if monthcomponents.month! >= 1 {
+            
+            _Date.text! = "\(monthcomponents.month!) ماه پیش"
+        }
+        else if daycomponents.day! >= 1 {
+            
+            _Date.text! = "\(daycomponents.day!) روز پیش"
+        }
+        else if hourcomponents.hour! >= 1 {
+            
+            _Date.text! = "\(hourcomponents.hour!) ساعت پیش"
+        }
+        else if minutecomponents.minute! >= 1
+        {
+            _Date.text! = "\(minutecomponents.minute!) دقیقه پیش"
+        }
+        else if secondcomponents.second! >= 30
+        {
+            _Date.text! = "\(secondcomponents.second!) ثانیه پیش"
+        }
+        else
+        {
+            _Date.text! = "همین الان"
+        }
         //date = date.stringByReplacingOccurrencesOfString("T", withString: "  ")
-        Date.text! = date as String
+        
         fullJokeText.text! = (joke.text as! String)
         likeBtn.badgeString = "\(joke.like!)"
         visitedBtn.badgeString = "\(joke.view!)"
@@ -88,6 +158,11 @@ class JokeCell: FoldingCell {
         if let image = joke.writer_image
         {
             jokeOwnerImage.loadImageWithCasheWithUrl(image as! String)
+        }
+        
+        if let image = joke.imageName
+        {
+            jokeImage.loadImageWithCasheWithUrl(image as! String)
         }
         
         if contentToDisplay == .favorites
@@ -106,12 +181,14 @@ class JokeCell: FoldingCell {
     override func awakeFromNib() {
         
         jokeOwnerUserName.layer.cornerRadius = 5
-        jokeOwnerUserName.backgroundColor = UIColor.red
+        jokeOwnerUserName.backgroundColor = UIColor(red: 192/255, green: 192/255, blue: 192/255, alpha: 1)
         jokeOwnerUserName.layer.masksToBounds = true
+        jokeOwnerUserName.textColor = UIColor.black
         
-        Date.layer.cornerRadius = 5
-        Date.backgroundColor = UIColor.orange
-        Date.layer.masksToBounds = true
+        //_Date.layer.cornerRadius = 5
+        //_Date.backgroundColor = UIColor(red: 192/255, green: 192/255, blue: 192/255, alpha: 1)
+        //_Date.layer.masksToBounds = true
+        _Date.textColor = UIColor.lightGray
         
         
         background.backgroundColor = UIColor.white
@@ -153,6 +230,9 @@ class JokeCell: FoldingCell {
         
         shareImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(share)))
         jokeOwnerImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(noOP)))
+        
+        JokeText.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        JokeText.textColor = UIColor.white
     
         super.awakeFromNib()
     }

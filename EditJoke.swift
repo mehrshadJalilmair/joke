@@ -57,7 +57,7 @@ class EditJoke: UIViewController , UITextViewDelegate{
         actInd.activityIndicatorViewStyle =
             UIActivityIndicatorViewStyle.whiteLarge
         actInd.center = CGPoint(x: loadingView.frame.size.width / 2,
-                                    y: loadingView.frame.size.height / 2);
+                                    y: loadingView.frame.size.height / 2)
         loadingView.addSubview(actInd)
         container.addSubview(loadingView)
         uiView.addSubview(container)
@@ -109,7 +109,7 @@ class EditJoke: UIViewController , UITextViewDelegate{
             {
                 return
             }
-            ActivityIndicatory(self.view)
+            //ActivityIndicatory(self.view)
             let configuration: URLSessionConfiguration = URLSessionConfiguration.default
             let session : URLSession = URLSession(configuration: configuration)
             let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3000/api/v1/joke/editjoke")!)
@@ -145,7 +145,7 @@ class EditJoke: UIViewController , UITextViewDelegate{
                                             
                                             self.dismiss(animated: true, completion: {
                                                 
-                                                SCLAlertView(appearance : appearance).showSuccess("Joke Edited Successfully", subTitle: "" , closeButtonTitle: "بازگشت" , duration: 3 , colorStyle: 0x00EE00 , colorTextButton: 0x000000)
+                                                SCLAlertView(appearance : appearance).showSuccess("جوک تصحیح شد!", subTitle: "" , closeButtonTitle: "بازگشت" , duration: 3 , colorStyle: 0x00EE00 , colorTextButton: 0x000000)
                                             })
                                         })
                                     }
@@ -165,7 +165,7 @@ class EditJoke: UIViewController , UITextViewDelegate{
                 DispatchQueue.main.async(execute: {
                     
                     //print(currentUser._id)
-                    self.container.removeFromSuperview()
+                    //self.container.removeFromSuperview()
                 })
             }
             dataTask.resume()

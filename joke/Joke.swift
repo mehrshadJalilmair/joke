@@ -12,11 +12,12 @@ class Joke : NSObject{
     
     var _id:AnyObject?
     var text:AnyObject?
-    var date:AnyObject?
+    var date:String?
     var like:AnyObject?
     var view:AnyObject?
     var writer:AnyObject?
     var writer_name:AnyObject?
     var writer_image:AnyObject?
     var like_or_not:Int? = -1
+    var imageName:AnyObject?
 }
