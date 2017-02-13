@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="536"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fbe-Jm-ojv" id="vhz-hQ-TEH">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="535"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="536"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1479452780_circle-content-share-social" translatesAutoresizingMaskIntoConstraints="NO" id="hWe-BD-I30">
@@ -74,14 +74,6 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJG-a5-fD4">
                                                             <rect key="frame" x="0.0" y="217" width="359" height="48"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xe8-uI-Ykl" customClass="MIBadgeButton" customModule="MIBadgeButton_Swift">
-                                                                    <rect key="frame" x="8" y="4" width="40" height="40"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="40" id="BOJ-uq-wIq"/>
-                                                                        <constraint firstAttribute="width" constant="40" id="YGz-wj-E2k"/>
-                                                                    </constraints>
-                                                                    <state key="normal" image="ic_visibility_white"/>
-                                                                </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afJ-tE-2AD" customClass="MIBadgeButton" customModule="MIBadgeButton_Swift">
                                                                     <rect key="frame" x="159" y="4" width="40" height="40"/>
                                                                     <constraints>
@@ -104,10 +96,18 @@
                                                                         <action selector="favorite:" destination="Fbe-Jm-ojv" eventType="touchUpInside" id="QBA-EA-s5T"/>
                                                                     </connections>
                                                                 </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xe8-uI-Ykl" customClass="MIBadgeButton" customModule="MIBadgeButton_Swift">
+                                                                    <rect key="frame" x="8" y="6" width="37" height="37"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="37" id="BOJ-uq-wIq"/>
+                                                                        <constraint firstAttribute="width" constant="37" id="YGz-wj-E2k"/>
+                                                                    </constraints>
+                                                                    <state key="normal" image="ic_visibility_white"/>
+                                                                </button>
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="bottom" secondItem="xe8-uI-Ykl" secondAttribute="bottom" constant="4" id="ETq-lN-5Cv"/>
+                                                                <constraint firstAttribute="bottom" secondItem="xe8-uI-Ykl" secondAttribute="bottom" constant="5" id="ETq-lN-5Cv"/>
                                                                 <constraint firstAttribute="bottom" secondItem="afJ-tE-2AD" secondAttribute="bottom" constant="4" id="Zv5-qi-Z92"/>
                                                                 <constraint firstAttribute="trailing" secondItem="Bp1-vK-Lh3" secondAttribute="trailing" constant="8" id="ehC-P3-7ee"/>
                                                                 <constraint firstItem="xe8-uI-Ykl" firstAttribute="leading" secondItem="gJG-a5-fD4" secondAttribute="leading" constant="8" id="ov7-ro-LFu"/>
@@ -514,7 +514,7 @@
                                         <rect key="frame" x="0.0" y="176" width="383" height="530"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tmk-zE-17H" id="I4T-1P-RsE">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="529"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="530"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1479452780_circle-content-share-social" translatesAutoresizingMaskIntoConstraints="NO" id="1NS-mg-nKz">
@@ -577,19 +577,11 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nsz-xP-a4T">
                                                             <rect key="frame" x="0.0" y="217" width="367" height="48"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Co6-Ma-XRC" customClass="MIBadgeButton" customModule="MIBadgeButton_Swift">
-                                                                    <rect key="frame" x="8" y="7" width="35" height="35"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="35" id="eAs-rU-Kgl"/>
-                                                                        <constraint firstAttribute="width" constant="35" id="hZx-WY-rET"/>
-                                                                    </constraints>
-                                                                    <state key="normal" image="ic_visibility_white"/>
-                                                                </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHI-8d-g3X" customClass="MIBadgeButton" customModule="MIBadgeButton_Swift">
-                                                                    <rect key="frame" x="166" y="7" width="35" height="35"/>
+                                                                    <rect key="frame" x="163" y="8" width="40" height="40"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="35" id="0o5-zp-C0r"/>
-                                                                        <constraint firstAttribute="height" constant="35" id="DRK-Jo-avb"/>
+                                                                        <constraint firstAttribute="width" constant="40" id="0o5-zp-C0r"/>
+                                                                        <constraint firstAttribute="height" constant="40" id="DRK-Jo-avb"/>
                                                                     </constraints>
                                                                     <state key="normal" image="ic_favorite_border_white"/>
                                                                     <connections>
@@ -597,26 +589,34 @@
                                                                     </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jD5-UB-7QF">
-                                                                    <rect key="frame" x="324" y="7" width="35" height="35"/>
+                                                                    <rect key="frame" x="319" y="4" width="40" height="40"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="35" id="1y8-5c-5Mj"/>
-                                                                        <constraint firstAttribute="height" constant="35" id="3DA-fl-6El"/>
+                                                                        <constraint firstAttribute="width" constant="40" id="1y8-5c-5Mj"/>
+                                                                        <constraint firstAttribute="height" constant="40" id="3DA-fl-6El"/>
                                                                     </constraints>
                                                                     <state key="normal" image="ic_turned_in_not_white"/>
                                                                     <connections>
                                                                         <action selector="favorite:" destination="Tmk-zE-17H" eventType="touchUpInside" id="AY6-PY-kdX"/>
                                                                     </connections>
                                                                 </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Co6-Ma-XRC" customClass="MIBadgeButton" customModule="MIBadgeButton_Swift">
+                                                                    <rect key="frame" x="8" y="5" width="37" height="37"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="37" id="eAs-rU-Kgl"/>
+                                                                        <constraint firstAttribute="width" constant="37" id="hZx-WY-rET"/>
+                                                                    </constraints>
+                                                                    <state key="normal" image="ic_visibility_white"/>
+                                                                </button>
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="jD5-UB-7QF" secondAttribute="trailing" constant="8" id="8rI-uE-gtO"/>
                                                                 <constraint firstAttribute="bottom" secondItem="Co6-Ma-XRC" secondAttribute="bottom" constant="6" id="HMS-cy-40S"/>
-                                                                <constraint firstAttribute="bottom" secondItem="LHI-8d-g3X" secondAttribute="bottom" constant="6" id="UVz-m7-POc"/>
+                                                                <constraint firstAttribute="bottom" secondItem="LHI-8d-g3X" secondAttribute="bottom" id="UVz-m7-POc"/>
                                                                 <constraint firstItem="Co6-Ma-XRC" firstAttribute="leading" secondItem="nsz-xP-a4T" secondAttribute="leading" constant="8" id="ZnN-NK-1Rr"/>
                                                                 <constraint firstAttribute="height" constant="48" id="c5z-vs-B80"/>
                                                                 <constraint firstItem="LHI-8d-g3X" firstAttribute="centerX" secondItem="nsz-xP-a4T" secondAttribute="centerX" id="tZK-fO-twv"/>
-                                                                <constraint firstAttribute="bottom" secondItem="jD5-UB-7QF" secondAttribute="bottom" constant="6" id="urI-We-bAc"/>
+                                                                <constraint firstAttribute="bottom" secondItem="jD5-UB-7QF" secondAttribute="bottom" constant="4" id="urI-We-bAc"/>
                                                             </constraints>
                                                         </view>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ym-qJ-o2E">
