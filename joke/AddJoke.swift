@@ -8,6 +8,8 @@
 
 import UIKit
 
+var jokeAdded = false
+
 class AddJoke: UIViewController , UITextViewDelegate , UIImagePickerControllerDelegate , UINavigationControllerDelegate{
 
     @IBOutlet weak var jokeImageView: UIImageView!
@@ -22,6 +24,7 @@ class AddJoke: UIViewController , UITextViewDelegate , UIImagePickerControllerDe
     
     override func viewDidLoad() {
         
+        jokeAdded = false
         _text.layer.cornerRadius = 10.0
         _text.layer.masksToBounds = false
         _text.layer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
@@ -129,7 +132,7 @@ class AddJoke: UIViewController , UITextViewDelegate , UIImagePickerControllerDe
             
             let configuration: URLSessionConfiguration = URLSessionConfiguration.default
             let session : URLSession = URLSession(configuration: configuration)
-            let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3000/api/v1/joke/addjoke")!)
+            let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3001/api/v1/joke/addjoke")!)
             request.httpMethod = "POST"
             let boundary = generateBoundaryString()
             request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
@@ -175,7 +178,7 @@ class AddJoke: UIViewController , UITextViewDelegate , UIImagePickerControllerDe
             
             /*let configuration: URLSessionConfiguration = URLSessionConfiguration.default
             let session : URLSession = URLSession(configuration: configuration)
-            let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3000/api/v1/joke/addjoke")!)
+            let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3001/api/v1/joke/addjoke")!)
             let bodyData = String.localizedStringWithFormat("text=%@&writer=%@", text , currentUser._id as! String) // in request body
             
             //print(bodyData)
@@ -206,12 +209,14 @@ class AddJoke: UIViewController , UITextViewDelegate , UIImagePickerControllerDe
                                     {
                                         if let _joke = _result["content"] as? [String : AnyObject]{
                                             
-                                            let _Joke = Joke()
-                                            _Joke.setValuesForKeys(_joke)
+                                            //let _Joke = Joke()
+                                            //_Joke.setValuesForKeys(_joke)
                                             //print(_joke)
-                                            jokes.insert(_Joke, at: 0)
+                                            //jokes.insert(_Joke, at: 0)
+                                            jokeAdded = true
+                                            
                                             DispatchQueue.main.async(execute: {
-                                                
+                                            
                                                 self.dismiss(animated: true, completion: { 
                                                     
                                                     SCLAlertView(appearance : appearance).showSuccess("جوک اضافه شد!", subTitle: "" , closeButtonTitle: "بازگشت" , duration: 3 , colorStyle: 0x00EE00 , colorTextButton: 0x000000)

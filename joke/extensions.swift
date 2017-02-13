@@ -22,7 +22,7 @@ extension UIImageView{
             return
         }
         
-        let url = URL(string: "http://54.67.65.222:3000/api/v1/user/userimage/\(url_)")
+        let url = URL(string: "http://54.67.65.222:3001/api/v1/user/userimage/\(url_)")
         URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
             
             if error != nil{

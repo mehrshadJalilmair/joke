@@ -388,7 +388,7 @@ extension UserProfile{
         let configuration: URLSessionConfiguration = URLSessionConfiguration.default
         let session : URLSession = URLSession(configuration: configuration)
         
-        let urlString = "http://54.67.65.222:3000/api/v1/joke/getuserfavoritejokes/\(favList.joined(separator: ","))"
+        let urlString = "http://54.67.65.222:3001/api/v1/joke/getuserfavoritejokes/\(favList.joined(separator: ","))"
         
         if let url = URL(string: urlString) {
             
@@ -476,7 +476,7 @@ extension UserProfile{
         
         let configuration: URLSessionConfiguration = URLSessionConfiguration.default
         let session : URLSession = URLSession(configuration: configuration)
-        let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3000/api/v1/joke/getuserjokes/\(currentUser._id!)")!)
+        let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3001/api/v1/joke/getuserjokes/\(currentUser._id!)")!)
         
         request.httpMethod = "GET"
         
@@ -577,7 +577,7 @@ extension UserProfile{
         
         let configuration: URLSessionConfiguration = URLSessionConfiguration.default
         let session : URLSession = URLSession(configuration: configuration)
-        let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3000/api/v1/joke/like_dislike")!)
+        let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3001/api/v1/joke/like_dislike")!)
         
         
         let bodyData = String.localizedStringWithFormat("jokeid=%@&like=%@", "\(joke._id!)" , "\(like_or_dislike!)")
@@ -678,6 +678,22 @@ extension UserProfile{
     func share(_ cell: FoldingCell) {
         
         //print("share")
+        // text to share
+        let index = self.tableView.indexPath(for: cell)?.row
+        let text = jokes[index!].text as! String
+        
+        // set up activity view controller
+        let textToShare = [ text ]
+        let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+        // exclude some activity types from the list (optional)
+        //activityViewController.excludedActivityTypes = [ UIActivityType.airDrop, UIActivityType.postToFacebook]
+        
+        // present the view controller
+        present(activityViewController, animated: true) {
+            
+            
+        }
     }
     
     func favorite(_ cell: FoldingCell) {
@@ -715,7 +731,7 @@ extension UserProfile{
         
         let configuration: URLSessionConfiguration = URLSessionConfiguration.default
         let session : URLSession = URLSession(configuration: configuration)
-        let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3000/api/v1/user/userinfo/\(currentUser._id!)")!)
+        let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3001/api/v1/user/userinfo/\(currentUser._id!)")!)
         
         request.httpMethod = "GET"
         
@@ -789,7 +805,7 @@ extension UserProfile{
         
         let configuration: URLSessionConfiguration = URLSessionConfiguration.default
         let session : URLSession = URLSession(configuration: configuration)
-        let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3000/api/v1/joke/deletejoke")!)
+        let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3001/api/v1/joke/deletejoke")!)
         let joke : Joke!
         joke = userJokes[index!]
         

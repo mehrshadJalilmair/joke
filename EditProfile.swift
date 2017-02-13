@@ -104,7 +104,7 @@ class EditProfile: UIViewController , UIImagePickerControllerDelegate , UINaviga
         
         let configuration: URLSessionConfiguration = URLSessionConfiguration.default
         let session : URLSession = URLSession(configuration: configuration)
-        let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3000/api/v1/user/edituser")!)
+        let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3001/api/v1/user/edituser")!)
         request.httpMethod = "POST"
         let boundary = generateBoundaryString()
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")

@@ -112,7 +112,7 @@ class EditJoke: UIViewController , UITextViewDelegate{
             //ActivityIndicatory(self.view)
             let configuration: URLSessionConfiguration = URLSessionConfiguration.default
             let session : URLSession = URLSession(configuration: configuration)
-            let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3000/api/v1/joke/editjoke")!)
+            let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3001/api/v1/joke/editjoke")!)
             let bodyData = String.localizedStringWithFormat("text=%@&jokeid=%@", text , jokeForEdit._id as! String) // in request body
             
             //print(bodyData)

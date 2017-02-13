@@ -327,7 +327,7 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = BJ9VCS422A;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					2184A98D1DC813FB00E55E08 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -712,7 +712,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mfMJM.firstIdea.joke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "12a9282a-2504-4f31-9aa3-fca645cda0bc";
+				PROVISIONING_PROFILE_SPECIFIER = finalJoke;
 				SWIFT_OBJC_BRIDGING_HEADER = "joke-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -735,7 +736,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mfMJM.firstIdea.joke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "12a9282a-2504-4f31-9aa3-fca645cda0bc";
+				PROVISIONING_PROFILE_SPECIFIER = finalJoke;
 				SWIFT_OBJC_BRIDGING_HEADER = "joke-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

@@ -110,7 +110,7 @@ class LoginRegister: UIViewController , UIImagePickerControllerDelegate , UINavi
         let configuration: URLSessionConfiguration = URLSessionConfiguration.default
         let session : URLSession = URLSession(configuration: configuration)
         
-        let address = "http://54.67.65.222:3000/api/v1/user/login/\(email)/\(username)"
+        let address = "http://54.67.65.222:3001/api/v1/user/login/\(email)/\(username)"
         let escapedAddress = address.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         let urlpath = NSString(format: escapedAddress! as NSString)
         
@@ -239,7 +239,7 @@ class LoginRegister: UIViewController , UIImagePickerControllerDelegate , UINavi
         ActivityIndicatory(self.view)
         let configuration: URLSessionConfiguration = URLSessionConfiguration.default
         let session : URLSession = URLSession(configuration: configuration)
-        let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3000/api/v1/user/adduser")!)
+        let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3001/api/v1/user/adduser")!)
         request.httpMethod = "POST"
         let boundary = generateBoundaryString()
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")

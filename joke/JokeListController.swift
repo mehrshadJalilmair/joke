@@ -23,7 +23,7 @@ var loadAgain = 1
 class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, LiquidFloatingActionButtonDelegate , FoldingCellDelegate , UIScrollViewDelegate{
 
     var Offset = 0
-    var loadingMore = true
+    var loadingMore = false
     
     var cells: [LiquidFloatingCell] = []
     var bottomRightButton: LiquidFloatingActionButton!
@@ -47,6 +47,10 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
         setupActionButton()
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
+        
+        self.Offset = 0
+        self.loadingMore = false
+        getJokes()
     }
     
     func ActivityIndicatory(_ uiView: UIView) {
@@ -87,9 +91,14 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
             loadAgain = 0
         }
         
-        self.Offset = 0
-        self.loadingMore = true
-        getJokes()
+        if jokeAdded {
+            
+            self.Offset = 0
+            loadingMore = false
+            jokeAdded = false
+            getJokes()
+        }
+        //print("viewDidAppear")
         //self.tableView.reloadData()
     }
     
@@ -99,7 +108,7 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
     {
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(PullToRefresh), for: UIControlEvents.valueChanged)
-        //tableView.addSubview(refreshControl)
+        tableView.addSubview(refreshControl)
         //loadCustomRefreshContents()
     }
     func PullToRefresh() {
@@ -108,7 +117,7 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
             
             //refreshControl.beginRefreshing()
             self.Offset = 0
-            self.loadingMore = true
+            self.loadingMore = false
             getJokes()
         }
     }
@@ -134,16 +143,30 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
             temp = 0
         }
         
+        var reachBottom = false
+        var reachTop = false
+        
         self.lastContentOffset = scrollView.contentOffset.y
         
         if (scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height)) {
             //reach bottom
             //print("bottom")
+            reachBottom = true
         }
         
         if (scrollView.contentOffset.y < 0){
             //reach top
             //print("top")
+            reachTop = true
+        }
+        
+        if reachBottom && jokes.count < 3
+        {
+            self.bottomRightButton.isHidden = true
+        }
+        else if reachTop && jokes.count < 3
+        {
+            self.bottomRightButton.isHidden = false
         }
         
         if (scrollView.contentOffset.y >= 0 && scrollView.contentOffset.y < (scrollView.contentSize.height - scrollView.frame.size.height)){
@@ -209,7 +232,6 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
         let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let content = storyboard.instantiateViewController(withIdentifier: "addJoke")
         let partialModal: EMPartialModalViewController = EMPartialModalViewController(rootViewController: content, contentHeight: self.view.bounds.height - 100)
-        
         self.present(partialModal, animated: true)
         {
             
@@ -247,6 +269,7 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
             if loadingMore {
                 
                 getJokes()
+                loadingMore = false
             }
         }
         
@@ -342,7 +365,7 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
         {
             refreshControl.beginRefreshing()
             self.Offset = 0
-            self.loadingMore = true
+            self.loadingMore = false
             getJokes()
         }
     }
@@ -454,7 +477,7 @@ extension ViewController{
         
         let configuration: URLSessionConfiguration = URLSessionConfiguration.default
         let session : URLSession = URLSession(configuration: configuration)
-        let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3000/api/v1/joke/like_dislike")!)
+        let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3001/api/v1/joke/like_dislike")!)
         let joke = jokes[index]
         let bodyData = String.localizedStringWithFormat("jokeid=%@&like=%@", "\(joke._id!)" , "\(like_or_dislike!)")
         
@@ -599,7 +622,7 @@ extension ViewController{
         
         let configuration: URLSessionConfiguration = URLSessionConfiguration.default
         let session : URLSession = URLSession(configuration: configuration)
-        let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3000/api/v1/joke/getjokes/\(self.Offset)")!)
+        let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3001/api/v1/joke/getjokes/\(self.Offset)")!)
         
         request.httpMethod = "GET"
         
@@ -679,6 +702,7 @@ extension ViewController{
                     }
                 }
             }
+            
             DispatchQueue.main.async(execute: {
                 
                 //self.refreshControl.endRefreshing()
@@ -698,7 +722,7 @@ extension ViewController{
         //print("\(id)\n")
         let configuration: URLSessionConfiguration = URLSessionConfiguration.default
         let session : URLSession = URLSession(configuration: configuration)
-        let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3000/api/v1/joke/viewsplus")!)
+        let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3001/api/v1/joke/viewsplus")!)
         let bodyData = String.localizedStringWithFormat("jokeid=%@", id) // in request body
         
         //print(bodyData)
@@ -762,7 +786,7 @@ extension ViewController{
         
         let configuration: URLSessionConfiguration = URLSessionConfiguration.default
         let session : URLSession = URLSession(configuration: configuration)
-        let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3000/api/v1/user/userinfo/\(currentUser._id!)")!)
+        let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3001/api/v1/user/userinfo/\(currentUser._id!)")!)
         
         request.httpMethod = "GET"
         
