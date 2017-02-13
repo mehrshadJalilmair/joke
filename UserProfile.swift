@@ -612,14 +612,23 @@ extension UserProfile{
                                     DispatchQueue.main.async(execute: {
                                         
                                         if contentToDisplay == .myJokes {
+                            
+                                            
                                             
                                             (userJokes[index!].like_or_not! == 1 ? (userJokes[index!].like_or_not! = -1) : (userJokes[index!].like_or_not = 1))
-                                            (userJokes[index!].like_or_not! == 1) ? (userJokes[index!].like = (userJokes[index!].like as! Int) + 1 as  AnyObject) : (userJokes[index!].like = (userJokes[index!].like as! Int) - 1 as  AnyObject)
+                                            
+                                            let a = (userJokes[index!].like as! Int + (1))
+                                            let b = (userJokes[index!].like as! Int - (1))
+                                            (userJokes[index!].like_or_not! == 1) ? (userJokes[index!].like = a as AnyObject?) : (userJokes[index!].like = b as AnyObject?)
                                         }
                                         else{
                                             
                                             (userFavoritJokes[index!].like_or_not! == 1 ? (userFavoritJokes[index!].like_or_not! = -1) : (userFavoritJokes[index!].like_or_not = 1))
-                                            (userFavoritJokes[index!].like_or_not! == 1) ? (userFavoritJokes[index!].like = (userFavoritJokes[index!].like as! Int) + 1 as  AnyObject) : (userFavoritJokes[index!].like = (userFavoritJokes[index!].like as! Int) - 1 as  AnyObject)
+                                            
+                                            let a = (userFavoritJokes[index!].like as! Int) + 1
+                                            let b = (userFavoritJokes[index!].like as! Int) - 1
+                                            
+                                            (userFavoritJokes[index!].like_or_not! == 1) ? (userFavoritJokes[index!].like = a as AnyObject?) : (userFavoritJokes[index!].like = b as AnyObject?)
                                         }
                                         
                                         if contentToDisplay == .myJokes {

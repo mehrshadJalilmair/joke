@@ -424,15 +424,22 @@ extension ViewController{
     //cell protocol functions
     func like(_ cell: FoldingCell) {
         
-        let index = self.tableView.indexPath(for: cell)?.row
+        
+        
+        guard let indexPath = self.tableView.indexPath(for: cell) else
+        {
+            return
+        }
+        let index = indexPath.row
+        
         var like_or_dislike:Int!
-        (jokes[index!].like_or_not! == 1 ? (like_or_dislike = -1) : (like_or_dislike = 1)) //error at Here
+        (jokes[index].like_or_not! == 1 ? (like_or_dislike = -1) : (like_or_dislike = 1)) //error at Here
         
         let configuration: URLSessionConfiguration = URLSessionConfiguration.default
         let session : URLSession = URLSession(configuration: configuration)
         let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3000/api/v1/joke/like_dislike")!)
-        let joke = jokes[index!]
-        let bodyData = String.localizedStringWithFormat("jokeid=%@&like=%@", "\(joke._id!)" , "\(like_or_dislike)")
+        let joke = jokes[index]
+        let bodyData = String.localizedStringWithFormat("jokeid=%@&like=%@", "\(joke._id!)" , "\(like_or_dislike!)")
         
         request.httpMethod = "POST"
         request.httpBody = bodyData.data(using: String.Encoding.utf8)
@@ -462,30 +469,39 @@ extension ViewController{
                                 {
                                     DispatchQueue.main.async(execute: {
                                         
-                                        (jokes[index!].like_or_not! == 1 ? (jokes[index!].like_or_not! = -1) : (jokes[index!].like_or_not = 1))
+                                        (jokes[index].like_or_not! == 1 ? (jokes[index].like_or_not! = -1) : (jokes[index].like_or_not = 1))
                                         
-                                        (jokes[index!].like_or_not! == 1) ? (jokes[index!].like = (jokes[index!].like as! Int) + 1 as  AnyObject) : (jokes[index!].like = (jokes[index!].like as! Int) - 1 as  AnyObject)
+                                        let a = (jokes[index].like as! Int) + 1
+                                        let b = (jokes[index].like as! Int) - 1
+                                        (jokes[index].like_or_not! == 1) ? (jokes[index].like = a as AnyObject?) : (jokes[index].like = b as AnyObject?)
                                         
-                                        if(jokes[index!].like_or_not! == 1){
+                                        if(jokes[index].like_or_not! == 1){
                                             
-                                            defaults.set("1" , forKey: "like_\(jokes[index!]._id!)_\(currentUser._id!)")
+                                            defaults.set("1" , forKey: "like_\(jokes[index]._id!)_\(currentUser._id!)")
                                             defaults.synchronize()
                                         }
                                         else{
                                             
-                                            defaults.set("-1" , forKey: "like_\(jokes[index!]._id!)_\(currentUser._id!)")
+                                            defaults.set("-1" , forKey: "like_\(jokes[index]._id!)_\(currentUser._id!)")
                                             defaults.synchronize()
                                         }
                                         
                                         //error at Here
-                                        self.tableView.reloadRows(at: [self.tableView.indexPath(for: cell)!], with: UITableViewRowAnimation.fade)
+                                        
+                                        
+                                        guard let indexPath = self.tableView.indexPath(for: cell) else
+                                        {
+                                            return
+                                        }
+                                        
+                                        self.tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.fade)
                                     })
                                 }
                                 else if(status == 501){
                                     
                                     DispatchQueue.main.async(execute: {
                                         
-                                        jokes.remove(at: index!)
+                                        jokes.remove(at: index)
                                         self.tableView.reloadData()
                                     })
                                 }
