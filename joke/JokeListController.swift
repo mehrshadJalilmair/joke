@@ -104,7 +104,7 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
     }
     func PullToRefresh() {
         
-        if refreshControl.isRefreshing {
+        if !refreshControl.isRefreshing {
             
             self.Offset = 0
             self.loadingMore = true
@@ -639,7 +639,7 @@ extension ViewController{
                                 else
                                 {
                                     self.loadingMore = true
-                                    self.Offset += 5
+                                    self.Offset += 20
                                 }
                                 
                                 for joke in _jokes{
