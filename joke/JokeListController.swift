@@ -106,6 +106,7 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
         
         if !refreshControl.isRefreshing {
             
+            refreshControl.beginRefreshing()
             self.Offset = 0
             self.loadingMore = true
             getJokes()
@@ -667,6 +668,7 @@ extension ViewController{
                                 DispatchQueue.main.async(execute: {
                                     
                                     //self.refreshControl.endRefreshing()
+                                    self.refreshControl.endRefreshing()
                                     self.tableView.reloadData()
                                 })
                             }
@@ -678,10 +680,7 @@ extension ViewController{
                     }
                 }
             }
-            DispatchQueue.main.async(execute: {
-                
-                self.refreshControl.endRefreshing()
-            })
+            self.refreshControl.endRefreshing()
         }
         dataTask.resume()
     }
