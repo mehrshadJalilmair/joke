@@ -99,19 +99,18 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
     {
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(PullToRefresh), for: UIControlEvents.valueChanged)
-        tableView.addSubview(refreshControl)
+        //tableView.addSubview(refreshControl)
         //loadCustomRefreshContents()
     }
     func PullToRefresh() {
         
-        if !refreshControl.isRefreshing {
+        if refreshControl.isRefreshing {
             
-            refreshControl.beginRefreshing()
+            //refreshControl.beginRefreshing()
             self.Offset = 0
             self.loadingMore = true
             getJokes()
         }
-        
     }
     
     fileprivate var lastContentOffset: CGFloat = 0
@@ -668,7 +667,7 @@ extension ViewController{
                                 DispatchQueue.main.async(execute: {
                                     
                                     //self.refreshControl.endRefreshing()
-                                    self.refreshControl.endRefreshing()
+                                    //self.refreshControl.endRefreshing()
                                     self.tableView.reloadData()
                                 })
                             }
@@ -680,7 +679,12 @@ extension ViewController{
                     }
                 }
             }
-            self.refreshControl.endRefreshing()
+            DispatchQueue.main.async(execute: {
+                
+                //self.refreshControl.endRefreshing()
+                //self.refreshControl.endRefreshing()
+                self.refreshControl.endRefreshing()
+            })
         }
         dataTask.resume()
     }
