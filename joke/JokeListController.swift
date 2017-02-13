@@ -22,6 +22,9 @@ var loadAgain = 1
 
 class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, LiquidFloatingActionButtonDelegate , FoldingCellDelegate , UIScrollViewDelegate{
 
+    var Offset = 0
+    var loadingMore = true
+    
     var cells: [LiquidFloatingCell] = []
     var bottomRightButton: LiquidFloatingActionButton!
     
@@ -83,8 +86,10 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
             }
             loadAgain = 0
         }
-        getJokes()
         
+        self.Offset = 0
+        self.loadingMore = true
+        getJokes()
         //self.tableView.reloadData()
     }
     
@@ -101,6 +106,8 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
         
         if refreshControl.isRefreshing {
             
+            self.Offset = 0
+            self.loadingMore = true
             getJokes()
         }
         
@@ -235,6 +242,14 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
         cell.joke = jokes[indexPath.row]
         cell.delegate = self
         
+        if indexPath.row == jokes.count - 1 { //load more
+            
+            if loadingMore {
+                
+                getJokes()
+            }
+        }
+        
         return cell
     }
     func tableView(_ tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: IndexPath) {
@@ -326,6 +341,8 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
         if !refreshControl.isRefreshing
         {
             refreshControl.beginRefreshing()
+            self.Offset = 0
+            self.loadingMore = true
             getJokes()
         }
     }
@@ -582,7 +599,7 @@ extension ViewController{
         
         let configuration: URLSessionConfiguration = URLSessionConfiguration.default
         let session : URLSession = URLSession(configuration: configuration)
-        let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3000/api/v1/joke/getjokes")!)
+        let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3000/api/v1/joke/getjokes/\(self.Offset)")!)
         
         request.httpMethod = "GET"
         
@@ -604,13 +621,26 @@ extension ViewController{
                                 return
                             }
                             
-                            if jokes.count > 0 {
+                            
+                            /*if jokes.count > 0 {
                                 
                                 jokes.removeAll()
                                 jokes = [Joke]()
-                            }
+                            }*/
                             
                             if let _jokes = _result["content"] as? [AnyObject]{
+                                
+                                self.Offset == 0 ? (jokes = [Joke]()) : ()
+                                
+                                if _jokes.count == 0
+                                {
+                                    self.loadingMore = false
+                                }
+                                else
+                                {
+                                    self.loadingMore = true
+                                    self.Offset += 5
+                                }
                                 
                                 for joke in _jokes{
                                     
@@ -634,12 +664,12 @@ extension ViewController{
                                         jokes.append(_Joke)
                                     }
                                 }
+                                DispatchQueue.main.async(execute: {
+                                    
+                                    //self.refreshControl.endRefreshing()
+                                    self.tableView.reloadData()
+                                })
                             }
-                            DispatchQueue.main.async(execute: {
-                                
-                                //self.refreshControl.endRefreshing()
-                                self.tableView.reloadData()
-                            })
                         }
                         
                     default:
