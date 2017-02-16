@@ -48,6 +48,7 @@ class JokeCell: FoldingCell {
     @IBOutlet weak var deleteBtn: UIButton!
     @IBOutlet weak var jokeImage: UIImageView!
     
+    
     let defaults = UserDefaults.standard
     
     func updateUI()
@@ -74,6 +75,8 @@ class JokeCell: FoldingCell {
         background.bringSubview(toFront: jokeOwnerUserName)
         background.bringSubview(toFront: _Date)
         background.bringSubview(toFront: JokeText)
+        //foregroundContainerView.bringSubview(toFront: editBtn)
+        //foregroundContainerView.bringSubview(toFront: deleteBtn)
         foregroundContainerView.bringSubview(toFront: JokeText)
         
         jokeOwnerUserName.text! = (joke.writer_name as! String)
@@ -167,18 +170,28 @@ class JokeCell: FoldingCell {
         
         if contentToDisplay == .favorites
         {
-            deleteBtn.isHidden = true
-            editBtn.isHidden = true
+            guard let delBtn = deleteBtn,let edBtn = editBtn else {
+                
+                return
+            }
+            delBtn.isHidden = true
+            edBtn.isHidden = true
             
         }
         else if contentToDisplay == .myJokes
         {
-            deleteBtn.isHidden = false
-            editBtn.isHidden = false
+            guard let delBtn = deleteBtn,let edBtn = editBtn else {
+                
+                return
+            }
+            delBtn.isHidden = false
+            edBtn.isHidden = false
         }
     }
     
     override func awakeFromNib() {
+        
+        super.awakeFromNib()
         
         jokeOwnerUserName.layer.cornerRadius = 5
         jokeOwnerUserName.backgroundColor = UIColor(red: 192/255, green: 192/255, blue: 192/255, alpha: 1)
@@ -218,7 +231,7 @@ class JokeCell: FoldingCell {
         
         jokeOwnerImage.layer.cornerRadius = 30
         jokeOwnerImage.layer.masksToBounds = true
-        
+
         likeBtn.badgeString = "100"
         visitedBtn.badgeString = "50000"
         likeBtn.badgeBackgroundColor = UIColor(red: 255/255, green: 51/255, blue: 51/255, alpha: 1)
@@ -231,12 +244,29 @@ class JokeCell: FoldingCell {
         jokeOwnerUserName.isUserInteractionEnabled = true
         
         shareImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(share)))
+        
         jokeOwnerImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(noOP)))
+        btnsBackground.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(noOP)))
         
         JokeText.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
         JokeText.textColor = UIColor.white
     
-        super.awakeFromNib()
+        if contentToDisplay == .favorites
+        {
+            
+        }
+        else if contentToDisplay == .myJokes
+        {
+            
+            guard let delBtn = deleteBtn,let edBtn = editBtn else {
+                
+                return
+            }
+            delBtn.layer.cornerRadius = 25
+            delBtn.layer.masksToBounds = true
+            edBtn.layer.cornerRadius = 25
+            edBtn.layer.masksToBounds = true
+        }
     }
     
     func share(){
