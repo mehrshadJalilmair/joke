@@ -465,7 +465,6 @@ extension ViewController{
     func like(_ cell: FoldingCell) {
         
         
-        
         guard let indexPath = self.tableView.indexPath(for: cell) else
         {
             return
