@@ -24,6 +24,8 @@ var pendingLikeRequest = [String:Bool]()
 
 class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, LiquidFloatingActionButtonDelegate , FoldingCellDelegate , UIScrollViewDelegate{
 
+    var pendingRequestgetJokes = false
+    
     var Offset = 0
     var loadingMore = false
     
@@ -96,15 +98,20 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
             loadAgain = 0
         }
         
-        if jokeAdded {
+        /*if jokeAdded {
             
             self.Offset = 0
             loadingMore = false
             jokeAdded = false
             getJokes()
-        }
+        }*/
+        self.Offset = 0
+        loadingMore = false
+        jokeAdded = false
+        getJokes()
+        
         //print("viewDidAppear")
-        self.tableView.reloadData()
+        //self.tableView.reloadData()
     }
     
     //Mark : Just Vars
@@ -476,6 +483,11 @@ extension ViewController{
         }
         let index = indexPath.row
         
+        if index >= jokes.count
+        {
+            return
+        }
+        
         if pendingLikeRequest[jokes[index]._id as! String] == true {
             
             return
@@ -552,7 +564,10 @@ extension ViewController{
                                     
                                     DispatchQueue.main.async(execute: {
                                         
-                                        jokes.remove(at: index)
+                                        if jokes.count > 0
+                                        {
+                                            jokes.remove(at: index)
+                                        }
                                         self.tableView.reloadData()
                                     })
                                 }
@@ -583,7 +598,11 @@ extension ViewController{
                 //self.likeRollBack(index!, like_dislike: jokes[index!].like_or_not!)
             }
             
-            pendingLikeRequest[jokes[index]._id as! String] = false
+            
+            if index < jokes.count
+            {
+                pendingLikeRequest[jokes[index]._id as! String] = false
+            }
         }
         dataTask.resume()
     }
@@ -617,6 +636,12 @@ extension ViewController{
     func favorite(_ cell: FoldingCell) {
         
         let index = self.tableView.indexPath(for: cell)?.row
+        
+        if index! >= jokes.count
+        {
+            return
+        }
+        
         let _Joke = jokes[index!]
         
         if defaults.object(forKey: "favorite_\(_Joke._id!)_\(currentUser._id!)") != nil{
@@ -640,6 +665,15 @@ extension ViewController{
         request.httpMethod = "GET"
         
         refreshBtn.isEnabled = false
+        
+        if pendingRequestgetJokes {
+            
+            return
+        }
+        else
+        {
+            pendingRequestgetJokes = true
+        }
         
         let dataTask = session.dataTask(with: request as URLRequest) {data,response,error in
             
@@ -716,12 +750,15 @@ extension ViewController{
                         //print(httpResponse.statusCode)
                     }
                 }
+                
+                
             }
             
             DispatchQueue.main.async(execute: {
                 
                 //self.refreshControl.endRefreshing()
                 //self.refreshControl.endRefreshing()
+                self.pendingRequestgetJokes = false
                 self.refreshBtn.isEnabled = true
                 self.refreshControl.endRefreshing()
             })

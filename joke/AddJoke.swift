@@ -211,7 +211,7 @@ class AddJoke: UIViewController , UITextViewDelegate , UIImagePickerControllerDe
                                     
                                     if status == 200
                                     {
-                                        if let _joke = _result["content"] as? [String : AnyObject]{
+                                        if let _ = _result["content"] as? [String : AnyObject]{
                                             
                                             //let _Joke = Joke()
                                             //_Joke.setValuesForKeys(_joke)
@@ -223,7 +223,7 @@ class AddJoke: UIViewController , UITextViewDelegate , UIImagePickerControllerDe
                                             
                                                 self.dismiss(animated: true, completion: { 
                                                     
-                                                    SCLAlertView(appearance : appearance).showSuccess("جوک اضافه شد!", subTitle: "" , closeButtonTitle: "بازگشت" , duration: 3 , colorStyle: 0x00EE00 , colorTextButton: 0x000000)
+                                                    let _ = SCLAlertView(appearance : appearance).showSuccess("جوک اضافه شد!", subTitle: "" , closeButtonTitle: "بازگشت" , duration: 3 , colorStyle: 0x00EE00 , colorTextButton: 0x000000)
                                                 })
                                             })
                                         }

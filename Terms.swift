@@ -33,7 +33,7 @@ class Terms: UIViewController {
     
     func shows()
     {
-        print("terms")
+        //print("terms")
         PopupController
             .create(self)
             .show(DemoPopupViewController1.instance())
@@ -50,6 +50,6 @@ class Terms: UIViewController {
         {
             confirmTerms = false
         }
-        print(confirmTerms)
+        //print(confirmTerms)
     }
 }

@@ -80,10 +80,10 @@ class DemoPopupViewController3: UIViewController {
                     ]
                 )
                 .didShowHandler { popup in
-                    print("showed popup!")
+                    //print("showed popup!")
                 }
                 .didCloseHandler { _ in
-                    print("closed popup!")
+                    //print("closed popup!")
             }
             
             let container = DemoPopupViewController4.instance()

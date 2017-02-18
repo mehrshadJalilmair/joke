@@ -152,7 +152,8 @@ class EditJoke: UIViewController , UITextViewDelegate{
                                             
                                             self.dismiss(animated: true, completion: {
                                                 
-                                                SCLAlertView(appearance : appearance).showSuccess("جوک تصحیح شد!", subTitle: "" , closeButtonTitle: "بازگشت" , duration: 3 , colorStyle: 0x00EE00 , colorTextButton: 0x000000)
+                                                
+                                                let _ = SCLAlertView(appearance : appearance).showSuccess("جوک تصحیح شد!", subTitle: "" , closeButtonTitle: "بازگشت" , duration: 3 , colorStyle: 0x00EE00 , colorTextButton: 0x000000)
                                             })
                                         })
                                     }

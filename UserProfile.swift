@@ -562,17 +562,50 @@ extension UserProfile{
         
         //print("like \(self.tableView.indexPathForCell(cell)?.row)")
         let index = self.tableView.indexPath(for: cell)?.row
+        
+        guard let _ = index else
+        {
+            return
+        }
+        
         var like_or_dislike:Int!
         let joke : Joke!
         
-        if pendingLikeRequest[jokes[index!]._id as! String] == true {
+        if contentToDisplay == .myJokes {
             
-            return
+            
+            if index! >= userJokes.count {
+                
+                return
+            }
+            
+            if pendingLikeRequest[userJokes[index!]._id as! String] == true {
+                
+                return
+            }
+            else
+            {
+                pendingLikeRequest[userJokes[index!]._id as! String] = true
+            }
         }
         else
         {
-            pendingLikeRequest[jokes[index!]._id as! String] = true
+            if index! >= userFavoritJokes.count {
+                
+                return
+            }
+            
+            if pendingLikeRequest[userFavoritJokes[index!]._id as! String] == true {
+                
+                return
+            }
+            else
+            {
+                pendingLikeRequest[userFavoritJokes[index!]._id as! String] = true
+            }
         }
+
+        
         
         if contentToDisplay == .myJokes {
             
@@ -672,6 +705,28 @@ extension UserProfile{
                                         self.tableView.reloadRows(at: [self.tableView.indexPath(for: cell)!], with: UITableViewRowAnimation.fade)
                                     })
                                 }
+                                else if(status == 501){
+                                    
+                                    DispatchQueue.main.async(execute: {
+                                        
+                                        if contentToDisplay == .myJokes {
+                                            
+                                            if userJokes.count > 0 && index! < userJokes.count
+                                            {
+                                                userJokes.remove(at: index!)
+                                            }
+                                            
+                                        }
+                                        else
+                                        {
+                                            if userFavoritJokes.count > 0 && index! < userFavoritJokes.count
+                                            {
+                                                userFavoritJokes.remove(at: index!)
+                                            }
+                                        }
+                                        self.tableView.reloadData()
+                                    })
+                                }
                             }
                         }
                         
@@ -681,7 +736,22 @@ extension UserProfile{
                     }
                 }
             }
-            pendingLikeRequest[jokes[index!]._id as! String] = false
+            
+            if contentToDisplay == .myJokes {
+                
+                
+                if index! < userJokes.count
+                {
+                    pendingLikeRequest[userJokes[index!]._id as! String] = false
+                }
+            }
+            else
+            {
+                if index! < userFavoritJokes.count
+                {
+                    pendingLikeRequest[userFavoritJokes[index!]._id as! String] = false
+                }
+            }
         }
         dataTask.resume()
     }
@@ -712,6 +782,22 @@ extension UserProfile{
         let index = self.tableView.indexPath(for: cell)?.row
         
         let _Joke:Joke!
+        
+        if contentToDisplay == .myJokes
+        {
+            if index! >= userJokes.count
+            {
+                return
+            }
+        }
+        else
+        {
+            if index! >= userFavoritJokes.count
+            {
+                return
+            }
+        }
+        
         contentToDisplay == .myJokes ? (_Joke = userJokes[index!]) : (_Joke = userFavoritJokes[index!])
         
         if defaults.object(forKey: "favorite_\(_Joke._id!)_\(currentUser._id!)") != nil{
@@ -818,6 +904,12 @@ extension UserProfile{
         let session : URLSession = URLSession(configuration: configuration)
         let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3001/api/v1/joke/deletejoke")!)
         let joke : Joke!
+        
+        if index! >= userJokes.count
+        {
+            return
+        }
+        
         joke = userJokes[index!]
         
         let bodyData = String.localizedStringWithFormat("jokeid=%@", "\(joke._id!)")

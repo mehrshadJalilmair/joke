@@ -56,10 +56,10 @@ class LoginRegister: UIViewController , UIImagePickerControllerDelegate , UINavi
                     ]
                 )
                 .didShowHandler { popup in
-                    print("showed popup!")
+                    //print("showed popup!")
                 }
                 .didCloseHandler { popup in
-                    print("closed popup!")
+                    //print("closed popup!")
             }
             
             let container = DemoPopupViewController3.instance()
