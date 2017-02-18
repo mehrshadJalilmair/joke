@@ -98,17 +98,29 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
             loadAgain = 0
         }
         
-        /*if jokeAdded {
+        if jokeAdded {
             
             self.Offset = 0
             loadingMore = false
             jokeAdded = false
             getJokes()
-        }*/
-        self.Offset = 0
+        }
+        
+        if changeFromProfile {
+            
+            changeFromProfile = false
+            self.Offset = 0
+            loadingMore = false
+            jokeAdded = false
+            ActivityIndicatory(self.view)
+            getJokes()
+        }
+        
+        /*self.Offset = 0
         loadingMore = false
         jokeAdded = false
-        getJokes()
+        ActivityIndicatory(self.view)
+        getJokes()*/
         
         //print("viewDidAppear")
         //self.tableView.reloadData()
@@ -658,6 +670,7 @@ extension ViewController{
     
     func getJokes(){
         
+        
         let configuration: URLSessionConfiguration = URLSessionConfiguration.default
         let session : URLSession = URLSession(configuration: configuration)
         let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3001/api/v1/joke/getjokes/\(self.Offset)")!)
@@ -761,6 +774,8 @@ extension ViewController{
                 self.pendingRequestgetJokes = false
                 self.refreshBtn.isEnabled = true
                 self.refreshControl.endRefreshing()
+                
+                self.container.removeFromSuperview()
             })
         }
         dataTask.resume()

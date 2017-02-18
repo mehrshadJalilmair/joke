@@ -18,6 +18,8 @@ var userFavoritJokes:[Joke] = [Joke]()
 var userJokesLoadAgain = 1
 var userFavoriteJokesLoadAgain = 1
 
+var changeFromProfile = false
+
 class UserProfile: UIViewController ,UIScrollViewDelegate , FoldingCellDelegate{
 
     let container: UIView = UIView()
@@ -653,6 +655,7 @@ extension UserProfile{
                                 if status == 200
                                 {
     
+                                    changeFromProfile = true
                                     DispatchQueue.main.async(execute: {
                                         
                                         if contentToDisplay == .myJokes {
@@ -798,6 +801,8 @@ extension UserProfile{
             }
         }
         
+        changeFromProfile = true
+        
         contentToDisplay == .myJokes ? (_Joke = userJokes[index!]) : (_Joke = userFavoritJokes[index!])
         
         if defaults.object(forKey: "favorite_\(_Joke._id!)_\(currentUser._id!)") != nil{
@@ -940,6 +945,8 @@ extension UserProfile{
                                 
                                 if status == 200
                                 {
+                                    changeFromProfile = true
+                                    
                                     DispatchQueue.main.async(execute: { 
                                         
                                         if defaults.object(forKey: "favorite_\(joke._id!)_\(currentUser._id!)") != nil

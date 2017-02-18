@@ -148,6 +148,8 @@ class EditJoke: UIViewController , UITextViewDelegate{
                                     
                                     if status == 200
                                     {
+                                        changeFromProfile = true
+                                        
                                         DispatchQueue.main.async(execute: {
                                             
                                             self.dismiss(animated: true, completion: {
