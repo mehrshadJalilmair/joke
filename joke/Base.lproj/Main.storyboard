@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="536"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fbe-Jm-ojv" id="vhz-hQ-TEH">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="535"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="536"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1479452780_circle-content-share-social" translatesAutoresizingMaskIntoConstraints="NO" id="hWe-BD-I30">
@@ -514,7 +514,7 @@
                                         <rect key="frame" x="0.0" y="176" width="383" height="530"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tmk-zE-17H" id="I4T-1P-RsE">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="529"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="530"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1479452780_circle-content-share-social" translatesAutoresizingMaskIntoConstraints="NO" id="1NS-mg-nKz">
@@ -930,6 +930,7 @@
                     <connections>
                         <outlet property="_text" destination="uzW-ES-rPu" id="HGD-am-hq2"/>
                         <outlet property="jokeImageView" destination="SH9-9t-WeR" id="cEP-Wn-O2l"/>
+                        <outlet property="senBtn" destination="N42-iv-vwH" id="K1H-OF-Cyc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dAS-6z-fct" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -986,6 +987,7 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="_text" destination="MfN-aR-DEU" id="gDk-E5-PjL"/>
+                        <outlet property="sendBtn" destination="0El-Mv-pyc" id="FKh-lv-UsM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h98-4J-sZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>

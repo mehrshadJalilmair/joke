@@ -22,6 +22,9 @@ class AddJoke: UIViewController , UITextViewDelegate , UIImagePickerControllerDe
     @IBOutlet weak var _text: UITextView!
     var textForSending:String?
     
+    @IBOutlet weak var senBtn: UIBarButtonItem!
+    
+    
     override func viewDidLoad() {
         
         jokeAdded = false
@@ -124,6 +127,7 @@ class AddJoke: UIViewController , UITextViewDelegate , UIImagePickerControllerDe
                 return
             }
             
+            senBtn.isEnabled = false
             //ActivityIndicatory(self.view)
             
             var imageData:Data?
@@ -239,6 +243,7 @@ class AddJoke: UIViewController , UITextViewDelegate , UIImagePickerControllerDe
                 }
                 DispatchQueue.main.async(execute: {
                     
+                    self.senBtn.isEnabled = true
                     //print(currentUser._id)
                     //self.container.removeFromSuperview()
                 })

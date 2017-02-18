@@ -563,6 +563,15 @@ extension UserProfile{
         var like_or_dislike:Int!
         let joke : Joke!
         
+        if pendingLikeRequest[jokes[index!]._id as! String] == true {
+            
+            return
+        }
+        else
+        {
+            pendingLikeRequest[jokes[index!]._id as! String] = true
+        }
+        
         if contentToDisplay == .myJokes {
             
             joke = userJokes[index!]
@@ -657,8 +666,7 @@ extension UserProfile{
                                                 defaults.synchronize()
                                             }
                                         }
-                                        
-                                       
+                                    
                                         self.tableView.reloadRows(at: [self.tableView.indexPath(for: cell)!], with: UITableViewRowAnimation.fade)
                                     })
                                 }
@@ -671,6 +679,7 @@ extension UserProfile{
                     }
                 }
             }
+            pendingLikeRequest[jokes[index!]._id as! String] = false
         }
         dataTask.resume()
     }

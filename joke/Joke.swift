@@ -19,5 +19,6 @@ class Joke : NSObject{
     var writer_name:AnyObject?
     var writer_image:AnyObject?
     var like_or_not:Int? = -1
+    var utcdate:AnyObject?
     var imageName:AnyObject?
 }

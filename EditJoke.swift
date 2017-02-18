@@ -21,6 +21,10 @@ class EditJoke: UIViewController , UITextViewDelegate{
     @IBOutlet weak var _text: UITextView!
     var textForSending:String?
     
+    @IBOutlet weak var sendBtn: UIBarButtonItem!
+    
+    
+    
     override func viewDidLoad() {
         
         _text.layer.cornerRadius = 10.0
@@ -109,6 +113,9 @@ class EditJoke: UIViewController , UITextViewDelegate{
             {
                 return
             }
+            
+            sendBtn.isEnabled = false
+            
             //ActivityIndicatory(self.view)
             let configuration: URLSessionConfiguration = URLSessionConfiguration.default
             let session : URLSession = URLSession(configuration: configuration)
@@ -164,6 +171,7 @@ class EditJoke: UIViewController , UITextViewDelegate{
                 }
                 DispatchQueue.main.async(execute: {
                     
+                    self.sendBtn.isEnabled = true
                     //print(currentUser._id)
                     //self.container.removeFromSuperview()
                 })

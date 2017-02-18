@@ -19,6 +19,8 @@ let appearance = SCLAlertView.SCLAppearance(
     showCloseButton: false
 )
 var loadAgain = 1
+var pendingLikeRequest = [String:Bool]()
+
 
 class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, LiquidFloatingActionButtonDelegate , FoldingCellDelegate , UIScrollViewDelegate{
 
@@ -471,6 +473,15 @@ extension ViewController{
         }
         let index = indexPath.row
         
+        if pendingLikeRequest[jokes[index]._id as! String] == true {
+            
+            return
+        }
+        else
+        {
+            pendingLikeRequest[jokes[index]._id as! String] = true
+        }
+        
         var like_or_dislike:Int!
         (jokes[index].like_or_not! == 1 ? (like_or_dislike = -1) : (like_or_dislike = 1)) //error at Here
         
@@ -525,9 +536,7 @@ extension ViewController{
                                             defaults.synchronize()
                                         }
                                         
-                                        //error at Here
-                                        
-                                        
+                                    
                                         guard let indexPath = self.tableView.indexPath(for: cell) else
                                         {
                                             return
@@ -570,6 +579,8 @@ extension ViewController{
                 
                 //self.likeRollBack(index!, like_dislike: jokes[index!].like_or_not!)
             }
+            
+            pendingLikeRequest[jokes[index]._id as! String] = false
         }
         dataTask.resume()
     }

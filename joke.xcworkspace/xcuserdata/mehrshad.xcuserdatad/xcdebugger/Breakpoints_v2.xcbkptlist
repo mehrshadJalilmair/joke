@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UserProfile.swift"
-            timestampString = "508690029.253777"
+            timestampString = "509109686.687956"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "803"
-            endingLineNumber = "803"
+            startingLineNumber = "812"
+            endingLineNumber = "812"
             landmarkName = "delete_(_:)"
             landmarkType = "7">
          </BreakpointContent>
