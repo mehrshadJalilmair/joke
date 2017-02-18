@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -264,6 +263,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="refreshBtn" destination="QYX-ih-hnd" id="eah-iv-yFS"/>
                         <outlet property="tableView" destination="4o4-aQ-zN1" id="ion-oA-e33"/>
                         <segue destination="mco-09-POD" kind="presentation" identifier="profile" modalTransitionStyle="crossDissolve" id="ihA-Xf-eED"/>
                         <segue destination="F4b-GT-HkJ" kind="presentation" identifier="registering" modalTransitionStyle="crossDissolve" id="lyI-xr-aOI"/>
@@ -1082,11 +1082,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="120.png" width="72" height="72"/>
+        <image name="120.png" width="1536" height="1536"/>
         <image name="1479452780_circle-content-share-social" width="128" height="128"/>
         <image name="1480522186_add-user" width="128" height="128"/>
         <image name="confirm" width="32" height="32"/>
-        <image name="default" width="83" height="83"/>
+        <image name="default" width="1536" height="1536"/>
         <image name="ic_account_circle_white" width="24" height="24"/>
         <image name="ic_delete_forever_white" width="24" height="24"/>
         <image name="ic_edit_white" width="24" height="24"/>

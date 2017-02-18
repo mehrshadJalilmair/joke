@@ -36,6 +36,9 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet var refreshBtn: UIBarButtonItem!
+    
+    
     let container: UIView = UIView()
     
     override func viewDidLoad() {
@@ -101,7 +104,7 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
             getJokes()
         }
         //print("viewDidAppear")
-        //self.tableView.reloadData()
+        self.tableView.reloadData()
     }
     
     //Mark : Just Vars
@@ -636,6 +639,8 @@ extension ViewController{
         
         request.httpMethod = "GET"
         
+        refreshBtn.isEnabled = false
+        
         let dataTask = session.dataTask(with: request as URLRequest) {data,response,error in
             
             if error == nil
@@ -717,6 +722,7 @@ extension ViewController{
                 
                 //self.refreshControl.endRefreshing()
                 //self.refreshControl.endRefreshing()
+                refreshBtn.isEnabled = true
                 self.refreshControl.endRefreshing()
             })
         }
