@@ -37,6 +37,42 @@ class LoginRegister: UIViewController , UIImagePickerControllerDelegate , UINavi
         profileImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(pickProfileImage)))
         profileImageView.isHidden = true
         
+        TermsAndHelp()
+    }
+    
+    func TermsAndHelp(){
+        
+        if defaults.value(forKey: "termTurnOff") == nil
+        {
+            let popup = PopupController
+                .create(self)
+                .customize(
+                    [
+                        .layout(.center),
+                        .animation(.fadeIn),
+                        .backgroundStyle(.blackFilter(alpha: 0.8)),
+                        .dismissWhenTaps(false),
+                        .scrollable(false)
+                    ]
+                )
+                .didShowHandler { popup in
+                    print("showed popup!")
+                }
+                .didCloseHandler { popup in
+                    print("closed popup!")
+            }
+            
+            let container = DemoPopupViewController3.instance()
+            container.closeHandler = { _ in
+                popup.dismiss()
+            }
+            
+            popup.show(container)
+        }
+        else
+        {
+            defaults.set("turned off", forKey: "termTurnOff")
+        }
     }
     
     func ActivityIndicatory(_ uiView: UIView) {

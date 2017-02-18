@@ -9,6 +9,9 @@
 import UIKit
 import CoreData
 
+let SCREEN_SIZE = UIScreen.main.bounds
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

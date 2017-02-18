@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HUa-BX-ylI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Demo Popup View Controller1-->
+        <scene sceneID="O9K-nN-fIm">
+            <objects>
+                <viewController id="HUa-BX-ylI" customClass="DemoPopupViewController1" customModule="joke" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SvN-py-UI6"/>
+                        <viewControllerLayoutGuide type="bottom" id="CXE-Ku-S9M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="owv-sh-6u0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="right" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaT-an-Tc9">
+                                <rect key="frame" x="16" y="20" width="343" height="639"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">شرایط و توافق نامه همگانی :
+
+1 – این توافق نامه بین ما و مشتریان مورد توافق قرار گرفته است و اگر مشتری این شرایط و شرایط دیگر حاکم   را قبول ندارد بنابراین حق استفاده از خدمات ما را ندارد 
+
+———————————–
+
+2 – شما به عنوان مشتری شرایط ذکر شده را کاملا قبول دارید .
+
+———————————–
+
+3 – هیچ گونه تضمین از طرف ما جهت ارتباط دنبال کنندگان با شما داده می شود و امکان این تماس وجود نخواهد داشت .
+
+———————————–
+
+4 – داشتن سن قانونی برای استفاده از خدمات  ما اجباری می باشد و اگر شما زیر سن قانونی هستید حق استفاده از  را نخواهید داشت .
+
+———————————–
+
+5 -هرگونه کپی برداری از خدمات و برنامه ما پیگرد قانونی خواهد داشت
+و حق کپی بطور کامل برای ما محفوظ می باشد بنابر این حق هرگونه کپی برداری از همه موارد غیر قانونی می باشد .
+
+———————————–
+
+6 – ما فقط خدمات را ارایه می دهیم و هیچ مسولیتی متوجه ما نخواهد بود اگر شما به نتیجه دلخواه خود نرسید
+یا اگر به واسطه استفاده از خدمات ضرر شما متوجه شود.
+
+———————————–
+
+7 – شما به عنوان مشتری تعهد می دهید که از خدمات ارایه شده توسط  سرویس در هیچ مورد غیر قانونی استفاده ننمایید .
+
+———————————–
+
+8 – شما تعهد می دهید که از خدمات ما جهت آزار و اذیت دیگران یا هرگونه عملی که خسارتی به کس دیگر وارد کند استفاده نکنید .
+
+———————————–
+
+9 – اگر تجهیزاتی در موارد قرار داد و توافق نامه عمدی اضافه شد به اطلاع خواهد رسید .
+
+———————————–
+
+10 – چنانچه سرویس کاربر در صورت بی توجه و یا قبول نکردن قوانین ارسال نشد کاربر بایستی با پشتیبانی ارتباط برقرار کرده و با پرداخت خسارت سرویس خود را دریافت کند.
+
+
+———————————–
+
+11 – شما به عنوان مشتری همه موارد فوق را قبول دارید و همه موارد را با دقت مطالعه کرده اید .
+اگر موردی را قبول ندارید حق استفاده از خدمات ما را نخواهید داشت .</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="yaT-an-Tc9" secondAttribute="trailing" id="B5c-iM-fsl"/>
+                            <constraint firstItem="CXE-Ku-S9M" firstAttribute="top" secondItem="yaT-an-Tc9" secondAttribute="bottom" constant="8" id="PaJ-lx-aEm"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="yaT-an-Tc9" secondAttribute="leading" id="S32-Wc-wFu"/>
+                            <constraint firstItem="yaT-an-Tc9" firstAttribute="top" secondItem="SvN-py-UI6" secondAttribute="bottom" id="mRM-z3-vnu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gvd-ft-vKR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="464.80000000000001" y="513.19340329835086"/>
+        </scene>
+    </scenes>
+</document>

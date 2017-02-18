@@ -1,12 +1,14 @@
 PODS:
   - FoldingCell (1.0.0)
   - LiquidFloatingActionButton (1.2.0)
+  - M13Checkbox (3.1.3)
   - MIBadgeButton-Swift (0.4)
   - VBPiledView (1.0)
 
 DEPENDENCIES:
   - FoldingCell
   - LiquidFloatingActionButton
+  - M13Checkbox
   - MIBadgeButton-Swift (from `https://github.com/mustafaibrahim989/MIBadgeButton-Swift.git`, branch `swift2`)
   - VBPiledView (~> 1.0)
 
@@ -23,9 +25,10 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   FoldingCell: ca0b0f73a853143bf7d968c04a6604d25fbf1af7
   LiquidFloatingActionButton: 9c28961915754e08cf596ea6bdd60f9cd949f172
+  M13Checkbox: c132a7e0eb964731855eff67b883a0b21b7c0977
   MIBadgeButton-Swift: b5d07924904c84bcb8e8fe3c3131b8499f28930c
   VBPiledView: 236fcb1a30fbd10f762d053d91849a23a9d30471
 
-PODFILE CHECKSUM: dc3b6ffe29276b5a4c0a4f4ed50d109ca1adcece
+PODFILE CHECKSUM: 940d11f8a982dfb47ebadaad4c127b2c86476f08
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.2.0

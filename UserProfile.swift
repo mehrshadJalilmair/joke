@@ -258,6 +258,8 @@ class UserProfile: UIViewController ,UIScrollViewDelegate , FoldingCellDelegate{
         defaults.removeObject(forKey: "joke_user_image")
         defaults.removeObject(forKey: "joke_user_id")
         
+        defaults.removeObject(forKey: "termTurnOff")
+        
         dismiss(animated: true, completion: nil)
     }
     

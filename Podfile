@@ -11,6 +11,7 @@ pod 'VBPiledView', '~> 1.0'
 pod 'FoldingCell'
 pod "MIBadgeButton-Swift", :git => 'https://github.com/mustafaibrahim989/MIBadgeButton-Swift.git', :branch => 'swift2'
 pod "LiquidFloatingActionButton"
+pod 'M13Checkbox'
 
   target 'jokeTests' do
     inherit! :search_paths

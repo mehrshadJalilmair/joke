@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2135ADF11DE0AD6C00DC3E2C /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2135ADF01DE0AD6C00DC3E2C /* extensions.swift */; };
 		2135ADF31DE1219300DC3E2C /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2135ADF21DE1219300DC3E2C /* SCLAlertView.swift */; };
-		217C35811DF9F4530028E7BC /* 120.png in Resources */ = {isa = PBXBuildFile; fileRef = 217C35801DF9F4530028E7BC /* 120.png */; };
 		218080D61DF085CA004186D7 /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218080D51DF085CA004186D7 /* EditProfile.swift */; };
 		2184A97B1DC813FA00E55E08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184A97A1DC813FA00E55E08 /* AppDelegate.swift */; };
 		2184A97D1DC813FA00E55E08 /* JokeListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184A97C1DC813FA00E55E08 /* JokeListController.swift */; };
@@ -32,6 +31,15 @@
 		21B1BBD81DC829CC00EB191B /* JokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B1BBD71DC829CC00EB191B /* JokeCell.swift */; };
 		21B1BBDA1DC82A4A00EB191B /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B1BBD91DC82A4A00EB191B /* Joke.swift */; };
 		21FB83AA1DEFA31C00AB9DD2 /* EditJoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FB83A91DEFA31B00AB9DD2 /* EditJoke.swift */; };
+		2F047E5B1E58BFB0004132B6 /* PopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F047E5A1E58BFB0004132B6 /* PopupController.swift */; };
+		2F047E5E1E58C012004132B6 /* DemoPopupViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F047E5C1E58C012004132B6 /* DemoPopupViewController3.swift */; };
+		2F047E5F1E58C012004132B6 /* DemoPopupViewController3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F047E5D1E58C012004132B6 /* DemoPopupViewController3.storyboard */; };
+		2F047E611E58CFC8004132B6 /* Terms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F047E601E58CFC8004132B6 /* Terms.swift */; };
+		2F047E641E58D196004132B6 /* DemoPopupViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F047E621E58D196004132B6 /* DemoPopupViewController1.swift */; };
+		2F047E651E58D196004132B6 /* DemoPopupViewController1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F047E631E58D196004132B6 /* DemoPopupViewController1.storyboard */; };
+		2F047E681E58E2AA004132B6 /* DemoPopupViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F047E661E58E2AA004132B6 /* DemoPopupViewController4.swift */; };
+		2F047E691E58E2AA004132B6 /* DemoPopupViewController4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F047E671E58E2AA004132B6 /* DemoPopupViewController4.storyboard */; };
+		2F16470C1E58EC4A00AA00D0 /* 120.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F16470B1E58EC4A00AA00D0 /* 120.png */; };
 		84A5572185B5F168C09B8841 /* Pods_jokeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC1A5400ACA7E8F8ECF34F8 /* Pods_jokeTests.framework */; };
 		CF87D8BFCD42636BCB94649C /* Pods_jokeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4247588DFDD0C3EF285DF2E /* Pods_jokeUITests.framework */; };
 		ED9A3D6C27CED3FA6DCF5CC8 /* Pods_joke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADA46673F5208B326F415AE /* Pods_joke.framework */; };
@@ -59,7 +67,6 @@
 		0AA07C6F9F913268316F49B3 /* Pods-jokeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jokeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-jokeUITests/Pods-jokeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2135ADF01DE0AD6C00DC3E2C /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		2135ADF21DE1219300DC3E2C /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
-		217C35801DF9F4530028E7BC /* 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 120.png; sourceTree = "<group>"; };
 		218080D51DF085CA004186D7 /* EditProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
 		2184A9771DC813F900E55E08 /* joke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = joke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2184A97A1DC813FA00E55E08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +97,15 @@
 		21B1BBD71DC829CC00EB191B /* JokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeCell.swift; sourceTree = "<group>"; };
 		21B1BBD91DC82A4A00EB191B /* Joke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Joke.swift; path = joke/Joke.swift; sourceTree = "<group>"; };
 		21FB83A91DEFA31B00AB9DD2 /* EditJoke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditJoke.swift; sourceTree = "<group>"; };
+		2F047E5A1E58BFB0004132B6 /* PopupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupController.swift; sourceTree = "<group>"; };
+		2F047E5C1E58C012004132B6 /* DemoPopupViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoPopupViewController3.swift; sourceTree = "<group>"; };
+		2F047E5D1E58C012004132B6 /* DemoPopupViewController3.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DemoPopupViewController3.storyboard; sourceTree = "<group>"; };
+		2F047E601E58CFC8004132B6 /* Terms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Terms.swift; sourceTree = "<group>"; };
+		2F047E621E58D196004132B6 /* DemoPopupViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoPopupViewController1.swift; sourceTree = "<group>"; };
+		2F047E631E58D196004132B6 /* DemoPopupViewController1.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DemoPopupViewController1.storyboard; sourceTree = "<group>"; };
+		2F047E661E58E2AA004132B6 /* DemoPopupViewController4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoPopupViewController4.swift; sourceTree = "<group>"; };
+		2F047E671E58E2AA004132B6 /* DemoPopupViewController4.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DemoPopupViewController4.storyboard; sourceTree = "<group>"; };
+		2F16470B1E58EC4A00AA00D0 /* 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 120.png; sourceTree = "<group>"; };
 		330CC1AEC5B8EAECAC2194D8 /* Pods-jokeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jokeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jokeTests/Pods-jokeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		51B81F70F7FEB0889D00DB49 /* Pods-joke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-joke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-joke/Pods-joke.debug.xcconfig"; sourceTree = "<group>"; };
 		7535261677CA6DC09BA8EECE /* Pods-jokeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jokeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jokeUITests/Pods-jokeUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,10 +146,11 @@
 		2184A96E1DC813F800E55E08 = {
 			isa = PBXGroup;
 			children = (
+				2F16470B1E58EC4A00AA00D0 /* 120.png */,
 				219016B91DDDEE470053EE7A /* joke-Bridging-Header.h */,
-				217C35801DF9F4530028E7BC /* 120.png */,
 				2190169E1DDDE0DF0053EE7A /* Joke */,
 				2190169D1DDDE0D60053EE7A /* User */,
+				2F047E571E58BF33004132B6 /* Terms and Help */,
 				2184A9791DC813F900E55E08 /* Main */,
 				2190169A1DDDE07C0053EE7A /* Libs */,
 				2184A9911DC813FB00E55E08 /* jokeTests */,
@@ -223,6 +240,21 @@
 				21FB83A91DEFA31B00AB9DD2 /* EditJoke.swift */,
 			);
 			name = Joke;
+			sourceTree = "<group>";
+		};
+		2F047E571E58BF33004132B6 /* Terms and Help */ = {
+			isa = PBXGroup;
+			children = (
+				2F047E5A1E58BFB0004132B6 /* PopupController.swift */,
+				2F047E601E58CFC8004132B6 /* Terms.swift */,
+				2F047E5C1E58C012004132B6 /* DemoPopupViewController3.swift */,
+				2F047E5D1E58C012004132B6 /* DemoPopupViewController3.storyboard */,
+				2F047E621E58D196004132B6 /* DemoPopupViewController1.swift */,
+				2F047E631E58D196004132B6 /* DemoPopupViewController1.storyboard */,
+				2F047E661E58E2AA004132B6 /* DemoPopupViewController4.swift */,
+				2F047E671E58E2AA004132B6 /* DemoPopupViewController4.storyboard */,
+			);
+			name = "Terms and Help";
 			sourceTree = "<group>";
 		};
 		3C4F201EF691B7113D8DAA76 /* Frameworks */ = {
@@ -367,7 +399,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2184A9881DC813FA00E55E08 /* LaunchScreen.storyboard in Resources */,
-				217C35811DF9F4530028E7BC /* 120.png in Resources */,
+				2F047E691E58E2AA004132B6 /* DemoPopupViewController4.storyboard in Resources */,
+				2F047E651E58D196004132B6 /* DemoPopupViewController1.storyboard in Resources */,
+				2F047E5F1E58C012004132B6 /* DemoPopupViewController3.storyboard in Resources */,
+				2F16470C1E58EC4A00AA00D0 /* 120.png in Resources */,
 				2184A9851DC813FA00E55E08 /* Assets.xcassets in Resources */,
 				2184A9801DC813FA00E55E08 /* Main.storyboard in Resources */,
 			);
@@ -532,7 +567,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F047E5B1E58BFB0004132B6 /* PopupController.swift in Sources */,
 				219016991DDDE0690053EE7A /* EMPartialModalViewController.swift in Sources */,
+				2F047E641E58D196004132B6 /* DemoPopupViewController1.swift in Sources */,
 				219016AA1DDDE8D20053EE7A /* StickyCollectionViewFlowLayout.swift in Sources */,
 				21B1BBD81DC829CC00EB191B /* JokeCell.swift in Sources */,
 				21B1BBDA1DC82A4A00EB191B /* Joke.swift in Sources */,
@@ -540,11 +577,14 @@
 				219016AC1DDDE8D70053EE7A /* UIColor+Hex.swift in Sources */,
 				219016A01DDDE1190053EE7A /* LoginRegister.swift in Sources */,
 				2184A97B1DC813FA00E55E08 /* AppDelegate.swift in Sources */,
+				2F047E611E58CFC8004132B6 /* Terms.swift in Sources */,
 				219016BE1DDE5C820053EE7A /* User.swift in Sources */,
 				2190169C1DDDE0AC0053EE7A /* AddJoke.swift in Sources */,
+				2F047E681E58E2AA004132B6 /* DemoPopupViewController4.swift in Sources */,
 				21FB83AA1DEFA31C00AB9DD2 /* EditJoke.swift in Sources */,
 				218080D61DF085CA004186D7 /* EditProfile.swift in Sources */,
 				219016BC1DDDEE480053EE7A /* FXBlurView.m in Sources */,
+				2F047E5E1E58C012004132B6 /* DemoPopupViewController3.swift in Sources */,
 				2135ADF11DE0AD6C00DC3E2C /* extensions.swift in Sources */,
 				2135ADF31DE1219300DC3E2C /* SCLAlertView.swift in Sources */,
 				219016AE1DDDE8E60053EE7A /* TWTButton.swift in Sources */,
@@ -708,7 +748,7 @@
 				DEVELOPMENT_TEAM = BJ9VCS422A;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = joke/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mfMJM.firstIdea.joke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -732,7 +772,7 @@
 				DEVELOPMENT_TEAM = BJ9VCS422A;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = joke/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mfMJM.firstIdea.joke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
