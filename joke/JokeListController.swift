@@ -722,7 +722,7 @@ extension ViewController{
                 
                 //self.refreshControl.endRefreshing()
                 //self.refreshControl.endRefreshing()
-                refreshBtn.isEnabled = true
+                self.refreshBtn.isEnabled = true
                 self.refreshControl.endRefreshing()
             })
         }
