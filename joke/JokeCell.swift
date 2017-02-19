@@ -246,8 +246,12 @@ class JokeCell: FoldingCell {
 
         likeBtn.badgeString = "100"
         visitedBtn.badgeString = "50000"
-        likeBtn.badgeBackgroundColor = UIColor(red: 255/255, green: 51/255, blue: 51/255, alpha: 1)
-        visitedBtn.badgeBackgroundColor = UIColor(red: 255/255, green: 51/255, blue: 51/255, alpha: 1)
+        likeBtn.badgeBackgroundColor = UIColor(red: 220/255, green: 51/255, blue: 51/255, alpha: 1)
+        visitedBtn.badgeBackgroundColor = UIColor(red: 220/255, green: 51/255, blue: 51/255, alpha: 1)
+        
+        likeBtn.badgeTextColor = UIColor.white
+        visitedBtn.badgeTextColor = UIColor.white
+        
         
         jokeOwnerImage.isUserInteractionEnabled = true
         

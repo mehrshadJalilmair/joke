@@ -187,10 +187,12 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
         if reachBottom && jokes.count < 3
         {
             self.bottomRightButton.isHidden = true
+            return
         }
         else if reachTop && jokes.count < 3
         {
             self.bottomRightButton.isHidden = false
+            return
         }
         
         if (scrollView.contentOffset.y >= 0 && scrollView.contentOffset.y < (scrollView.contentSize.height - scrollView.frame.size.height)){

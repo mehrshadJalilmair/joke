@@ -120,9 +120,8 @@ class EditJoke: UIViewController , UITextViewDelegate{
             let configuration: URLSessionConfiguration = URLSessionConfiguration.default
             let session : URLSession = URLSession(configuration: configuration)
             let request = NSMutableURLRequest(url: URL(string: "http://54.67.65.222:3001/api/v1/joke/editjoke")!)
-            let bodyData = String.localizedStringWithFormat("text=%@&jokeid=%@", text , jokeForEdit._id as! String) // in request body
+            let bodyData = String.localizedStringWithFormat("jokeid=%@&text=%@", jokeForEdit._id as! String , text) // in request body
             
-            //print(bodyData)
             request.httpMethod = "POST"
             request.httpBody = bodyData.data(using: String.Encoding.utf8)
             
