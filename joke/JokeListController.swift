@@ -114,6 +114,7 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
             jokeAdded = false
             ActivityIndicatory(self.view)
             getJokes()
+            self.bottomRightButton.isHidden = false
         }
         
         /*self.Offset = 0
@@ -630,14 +631,43 @@ extension ViewController{
     
     func share(_ cell: FoldingCell) {
         
+        
         //print("share")
         // text to share
         let index = self.tableView.indexPath(for: cell)?.row
+        
+        
+        guard let _ = index else {
+            
+            return
+        }
+        
+        if index! >= jokes.count
+        {
+            return
+        }
+        
+        var objectsToShare = [AnyObject]()
+        
         let text = jokes[index!].text as! String
+        objectsToShare.append(text as AnyObject) //text
+        
+        
+        if jokes[index!].imageName as! String == ""
+        {
+            
+        }
+        else
+        {
+            if let imageCached = imageCache.object(forKey: "\(jokes[index!].imageName!)" as AnyObject) as? UIImage{
+                
+                objectsToShare.append(imageCached)
+            }
+        }
         
         // set up activity view controller
-        let textToShare = [ text ]
-        let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+        //let textToShare = [ text ]
+        let activityViewController = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
         // exclude some activity types from the list (optional)
         //activityViewController.excludedActivityTypes = [ UIActivityType.airDrop, UIActivityType.postToFacebook]

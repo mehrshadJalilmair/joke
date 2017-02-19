@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -8,6 +8,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Yekan.ttf">
+            <string>BYekan</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Demo Popup View Controller3-->
         <scene sceneID="QaB-ds-gU0">
@@ -18,21 +23,22 @@
                         <viewControllerLayoutGuide type="bottom" id="PJs-cC-JHB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Vhz-os-Pfj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ft6-Tw-Hvi">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <connections>
                                     <outlet property="delegate" destination="S1V-Ka-qXC" id="ZME-GE-38K"/>
                                 </connections>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Yz-NW-a2t">
-                                <rect key="frame" x="329" y="620" width="30" height="37"/>
+                                <rect key="frame" x="339" y="689" width="55" height="37"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="TFx-Cm-kuD"/>
                                     <constraint firstAttribute="height" constant="37" id="rjl-09-1aO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <fontDescription key="fontDescription" name="BYekan" family="B Yekan" pointSize="18"/>
                                 <state key="normal" title="ورود">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -41,7 +47,7 @@
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="XUp-GH-X0i">
-                                <rect key="frame" x="168" y="622" width="39" height="37"/>
+                                <rect key="frame" x="187.66666666666666" y="691" width="39" height="37"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -63,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZB-Rn-ECJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="504.80000000000001" y="538.38080959520244"/>
+            <point key="canvasLocation" x="504.34782608695656" y="538.04347826086962"/>
         </scene>
         <!--Terms-->
         <scene sceneID="Qcy-3h-5hm">
@@ -74,26 +80,26 @@
                         <viewControllerLayoutGuide type="bottom" id="32r-lj-DG3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ncl-lS-sgh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="قوانین و مقررات" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byW-V2-aYG">
-                                <rect key="frame" x="139" y="324" width="96" height="18"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <rect key="frame" x="155" y="360" width="104.33333333333331" height="17"/>
+                                <fontDescription key="fontDescription" name="BYekan" family="B Yekan" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="خوندم و قبول دارم!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwx-I1-3t1">
-                                <rect key="frame" x="110" y="361" width="135" height="17"/>
+                                <rect key="frame" x="140" y="396" width="135" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="135" id="kwD-FP-pyM"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="BYekan" family="B Yekan" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Uh-aD-fjT" customClass="M13Checkbox" customModule="M13Checkbox">
-                                <rect key="frame" x="236" y="354" width="30" height="30"/>
+                                <rect key="frame" x="268" y="389" width="30" height="30"/>
                                 <color key="backgroundColor" red="0.34509803919999998" green="0.74509803919999995" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="7el-vV-kx9"/>
@@ -118,11 +124,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.34509803921568627" green="0.74509803921568629" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="mwx-I1-3t1" firstAttribute="centerX" secondItem="Ncl-lS-sgh" secondAttribute="centerX" constant="-10" id="ApA-kD-vsy"/>
+                            <constraint firstItem="mwx-I1-3t1" firstAttribute="centerX" secondItem="Ncl-lS-sgh" secondAttribute="centerX" constant="0.5" id="ApA-kD-vsy"/>
                             <constraint firstItem="byW-V2-aYG" firstAttribute="centerX" secondItem="Ncl-lS-sgh" secondAttribute="centerX" id="D1c-aj-47T"/>
-                            <constraint firstItem="2Uh-aD-fjT" firstAttribute="leading" secondItem="mwx-I1-3t1" secondAttribute="trailing" constant="-9" id="J52-85-RnH" userLabel="Checkbox.leading = خوندم و قبول دارم!.trailing + 4"/>
+                            <constraint firstItem="2Uh-aD-fjT" firstAttribute="leading" secondItem="mwx-I1-3t1" secondAttribute="trailing" constant="-7" id="J52-85-RnH" userLabel="Checkbox.leading = خوندم و قبول دارم!.trailing + 4"/>
                             <constraint firstItem="2Uh-aD-fjT" firstAttribute="top" secondItem="byW-V2-aYG" secondAttribute="bottom" constant="12" id="Jwp-yo-Huy"/>
-                            <constraint firstItem="mwx-I1-3t1" firstAttribute="leading" secondItem="Ncl-lS-sgh" secondAttribute="leadingMargin" constant="94" id="UlW-ZS-YVe"/>
                             <constraint firstItem="byW-V2-aYG" firstAttribute="centerY" secondItem="Ncl-lS-sgh" secondAttribute="centerY" id="nau-dq-8Pa"/>
                             <constraint firstItem="mwx-I1-3t1" firstAttribute="top" secondItem="byW-V2-aYG" secondAttribute="bottom" constant="19" id="o85-gZ-HDK"/>
                         </constraints>
@@ -145,18 +150,18 @@
                         <viewControllerLayoutGuide type="bottom" id="fr9-CJ-NHB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kao-rS-I1b">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="هر نیم ساعت یکبار جوک هایی که کمتر از ۲۰ درصد مشاهده کننده هاش ،لایکش کنن حذف میشن،پس سعی کنید جوک های باحال بزارید!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9l-3E-eBD">
-                                <rect key="frame" x="16" y="304.5" width="343" height="57.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="هر نیم ساعت یکبار جوک هایی که کمتر از ۲۰ درصد مشاهده کننده هاش ،لایکش کنن حذف میشن،پس سعی کنید جوک های باحال بزارید!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9l-3E-eBD">
+                                <rect key="frame" x="20" y="341.33333333333331" width="374" height="54"/>
+                                <fontDescription key="fontDescription" name="BYekan" family="B Yekan" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کار با خندونه" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAs-CD-1W1">
-                                <rect key="frame" x="147.5" y="263.5" width="80.5" height="18"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <rect key="frame" x="167.33333333333337" y="301.33333333333331" width="79.666666666666657" height="17"/>
+                                <fontDescription key="fontDescription" name="BYekan" family="B Yekan" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -185,25 +190,25 @@
                         <viewControllerLayoutGuide type="bottom" id="j9M-bC-A3e"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Iix-bc-3vu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="خندونه" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4h-xN-xsF">
-                                <rect key="frame" x="168" y="281" width="38" height="16"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="16" id="QiV-QT-ebu"/>
-                                    <constraint firstAttribute="width" constant="38" id="brG-Gm-Bd9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" *فرصتی برای با هم خندیدن*" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCC-kf-Y0z">
-                                <rect key="frame" x="50" y="305" width="274" height="56"/>
+                                <rect key="frame" x="54" y="340" width="305" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="Wti-YU-OPu"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="BYekan" family="B Yekan" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="خندونه" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4h-xN-xsF">
+                                <rect key="frame" x="166" y="316" width="81" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="QiV-QT-ebu"/>
+                                    <constraint firstAttribute="width" constant="81" id="brG-Gm-Bd9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BYekan" family="B Yekan" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -221,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tmg-tZ-9n1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-207.19999999999999" y="1249.9250374812596"/>
+            <point key="canvasLocation" x="-207.24637681159422" y="1249.7282608695652"/>
         </scene>
     </scenes>
 </document>

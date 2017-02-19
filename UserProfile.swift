@@ -290,7 +290,7 @@ extension UserProfile{
     }
     func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
         
-        return cellHeights[indexPath.row]
+        return kCloseCellHeight //cellHeights[indexPath.row]
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -892,7 +892,7 @@ extension UserProfile{
         jokeForEdit = userJokes[index!]
         let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let content = storyboard.instantiateViewController(withIdentifier: "EditJoke")
-        let partialModal: EMPartialModalViewController = EMPartialModalViewController(rootViewController: content, contentHeight: self.view.bounds.height - 200)
+        let partialModal: EMPartialModalViewController = EMPartialModalViewController(rootViewController: content, contentHeight: self.view.bounds.height - 100)
         
         self.present(partialModal, animated: true)
         {

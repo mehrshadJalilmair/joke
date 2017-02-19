@@ -4,11 +4,15 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Yekan.ttf">
+            <string>BYekan</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Demo Popup View Controller1-->
         <scene sceneID="O9K-nN-fIm">
@@ -72,7 +76,7 @@
 
 11 – شما به عنوان مشتری همه موارد فوق را قبول دارید و همه موارد را با دقت مطالعه کرده اید .
 اگر موردی را قبول ندارید حق استفاده از خدمات ما را نخواهید داشت .</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="BYekan" family="B Yekan" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>

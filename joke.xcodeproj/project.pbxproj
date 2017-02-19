@@ -106,6 +106,7 @@
 		2F047E661E58E2AA004132B6 /* DemoPopupViewController4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoPopupViewController4.swift; sourceTree = "<group>"; };
 		2F047E671E58E2AA004132B6 /* DemoPopupViewController4.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DemoPopupViewController4.storyboard; sourceTree = "<group>"; };
 		2F16470B1E58EC4A00AA00D0 /* 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 120.png; sourceTree = "<group>"; };
+		2F27685F1E5A3A420093992C /* Yekan.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Yekan.ttf; sourceTree = "<group>"; };
 		330CC1AEC5B8EAECAC2194D8 /* Pods-jokeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jokeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jokeTests/Pods-jokeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		51B81F70F7FEB0889D00DB49 /* Pods-joke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-joke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-joke/Pods-joke.debug.xcconfig"; sourceTree = "<group>"; };
 		7535261677CA6DC09BA8EECE /* Pods-jokeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jokeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jokeUITests/Pods-jokeUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +149,7 @@
 			children = (
 				2F16470B1E58EC4A00AA00D0 /* 120.png */,
 				219016B91DDDEE470053EE7A /* joke-Bridging-Header.h */,
+				2F27685E1E5A3A2C0093992C /* Fonts */,
 				2190169E1DDDE0DF0053EE7A /* Joke */,
 				2190169D1DDDE0D60053EE7A /* User */,
 				2F047E571E58BF33004132B6 /* Terms and Help */,
@@ -255,6 +257,14 @@
 				2F047E671E58E2AA004132B6 /* DemoPopupViewController4.storyboard */,
 			);
 			name = "Terms and Help";
+			sourceTree = "<group>";
+		};
+		2F27685E1E5A3A2C0093992C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2F27685F1E5A3A420093992C /* Yekan.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		3C4F201EF691B7113D8DAA76 /* Frameworks */ = {
