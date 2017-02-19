@@ -153,6 +153,7 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
         
         if jokes.count < 2
         {
+            self.bottomRightButton.isHidden = false
             return
         }
         
@@ -184,17 +185,6 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
             reachTop = true
         }
         
-        if reachBottom && jokes.count < 3
-        {
-            self.bottomRightButton.isHidden = true
-            return
-        }
-        else if reachTop && jokes.count < 3
-        {
-            self.bottomRightButton.isHidden = false
-            return
-        }
-        
         if (scrollView.contentOffset.y >= 0 && scrollView.contentOffset.y < (scrollView.contentSize.height - scrollView.frame.size.height)){
             //not top and not bottom
             //print("not top and not bottom")
@@ -213,6 +203,17 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
                         self.bottomRightButton.isHidden = false // Here you hide it when animation done
                 })
             }
+        }
+        
+        if reachBottom && jokes.count < 3
+        {
+            self.bottomRightButton.isHidden = true
+            return
+        }
+        else if reachTop && jokes.count < 3
+        {
+            self.bottomRightButton.isHidden = false
+            return
         }
     }
     
