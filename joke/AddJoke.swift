@@ -14,6 +14,11 @@ class AddJoke: UIViewController , UITextViewDelegate , UIImagePickerControllerDe
 
     @IBOutlet weak var jokeImageView: UIImageView!
     
+    @IBOutlet var addImgeLabel: UILabel!
+    
+    @IBOutlet var unPickBtn: UIButton!
+    
+    
     var selectedImage = false
     var imageToUpload:UIImage!
     
@@ -43,10 +48,17 @@ class AddJoke: UIViewController , UITextViewDelegate , UIImagePickerControllerDe
         _text.textAlignment = .right
         _text.delegate = self
         
-        jokeImageView.isUserInteractionEnabled = true
+        jokeImageView.isUserInteractionEnabled = false
         jokeImageView.layer.cornerRadius = 5
         jokeImageView.clipsToBounds = true
-        jokeImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(pickImage)))
+        //jokeImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(pickImage)))
+        
+        addImgeLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(pickImage)))
+        
+        imageToUpload = UIImage(named: "default")
+        unPickBtn.layer.cornerRadius = 25
+        jokeImageView.clipsToBounds = true
+        unPickBtn.isHidden = true
     }
     
     func ActivityIndicatory(_ uiView: UIView) {
@@ -122,16 +134,25 @@ class AddJoke: UIViewController , UITextViewDelegate , UIImagePickerControllerDe
                 return
             }
             
-            if !selectedImage
+            /*if !selectedImage
             {
                 return
-            }
+            }*/
             
             senBtn.isEnabled = false
+            var haveimage = "true"
             //ActivityIndicatory(self.view)
             
             var imageData:Data?
-            imageData = UIImageJPEGRepresentation(imageToUpload, 0.1)
+            if selectedImage {
+                
+                imageData = UIImageJPEGRepresentation(imageToUpload, 0.1)
+            }
+            else
+            {
+                imageData = UIImageJPEGRepresentation(imageToUpload, 0.001)
+                haveimage = "false"
+            }
 
             
             let configuration: URLSessionConfiguration = URLSessionConfiguration.default
@@ -142,7 +163,7 @@ class AddJoke: UIViewController , UITextViewDelegate , UIImagePickerControllerDe
             request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
             
             let body = NSMutableData()
-            let fname = "test.jpg"
+            let fname = "joke.jpg"
             let mimetype = "image/jpg"
             
             let date = Date()
@@ -169,6 +190,11 @@ class AddJoke: UIViewController , UITextViewDelegate , UIImagePickerControllerDe
             body.append("--\(boundary)\r\n".data(using: String.Encoding.utf8)!)
             body.append("Content-Disposition:form-data; name=\"date\"\r\n\r\n".data(using: String.Encoding.utf8)!)
             body.append("\(finalDate)\r\n".data(using: String.Encoding.utf8)!)
+            
+            body.append("--\(boundary)\r\n".data(using: String.Encoding.utf8)!)
+            body.append("Content-Disposition:form-data; name=\"haveimage\"\r\n\r\n".data(using: String.Encoding.utf8)!)
+            body.append("\(haveimage)\r\n".data(using: String.Encoding.utf8)!)
+            
             
             body.append("--\(boundary)\r\n".data(using: String.Encoding.utf8)!)
             body.append("Content-Disposition:form-data; name=\"image\"; filename=\"\(fname)\"\r\n".data(using: String.Encoding.utf8)!)
@@ -256,6 +282,16 @@ class AddJoke: UIViewController , UITextViewDelegate , UIImagePickerControllerDe
         return "Boundary-\(UUID().uuidString)"
     }
     
+    
+    @IBAction func unPickImage(_ sender: Any) {
+        
+        unPickBtn.isHidden = true
+        selectedImage = false
+        imageToUpload = UIImage(named :"default")
+        jokeImageView.isHidden = true
+    }
+    
+    
     func pickImage(){
         
         let picker = UIImagePickerController()
@@ -278,11 +314,15 @@ class AddJoke: UIViewController , UITextViewDelegate , UIImagePickerControllerDe
         
         if let editedImage = info["UIImagePickerControllerEditedImage"]  as? UIImage{
             
+            jokeImageView.isHidden = false
             image = editedImage
             selectedImage = true
+            unPickBtn.isHidden = false
         }
         else if let originalImage = info["UIImagePickerControllerOriginalImage"] as? UIImage{
             
+            jokeImageView.isHidden = false
+            unPickBtn.isHidden = false
             image = originalImage
             selectedImage = true
         }

@@ -10,7 +10,7 @@ import UIKit
 
 var currentUser = User()
 
-class LoginRegister: UIViewController , UIImagePickerControllerDelegate , UINavigationControllerDelegate{
+class LoginRegister: UIViewController , UIImagePickerControllerDelegate , UINavigationControllerDelegate , UITextFieldDelegate{
 
     @IBOutlet weak var errorDisplay: UILabel!
     
@@ -141,12 +141,17 @@ class LoginRegister: UIViewController , UIImagePickerControllerDelegate , UINavi
             self.errorDisplay.text = "فرمت ایمیل صحیح نیست!"
             return
         }
+        else if username.contains(" ")
+        {
+            self.errorDisplay.text = "کاراکتر فاصله وارد نکنید!"
+            return
+        }
         
         ActivityIndicatory(self.view)
         let configuration: URLSessionConfiguration = URLSessionConfiguration.default
         let session : URLSession = URLSession(configuration: configuration)
         
-        let address = "http://54.67.65.222:3001/api/v1/user/login/\(email)/\(username)"
+        let address = "http://54.67.65.222:3001/api/v1/user/login?email=\(email)&username=\(username)"
         let escapedAddress = address.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         let urlpath = NSString(format: escapedAddress! as NSString)
         
@@ -271,6 +276,11 @@ class LoginRegister: UIViewController , UIImagePickerControllerDelegate , UINavi
             self.errorDisplay.text = "فرمت ایمیل صحیح نیست!"
             return
         }
+        else if username.contains(" ")
+        {
+            self.errorDisplay.text = "کاراکتر فاصله وارد نکنید!"
+            return
+        }
         
         ActivityIndicatory(self.view)
         let configuration: URLSessionConfiguration = URLSessionConfiguration.default
@@ -281,7 +291,7 @@ class LoginRegister: UIViewController , UIImagePickerControllerDelegate , UINavi
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
         
         let body = NSMutableData()
-        let fname = "test.jpg"
+        let fname = "user.jpg"
         let mimetype = "image/jpg"
         
         body.append("--\(boundary)\r\n".data(using: String.Encoding.utf8)!)

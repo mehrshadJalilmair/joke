@@ -388,6 +388,7 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
         if !refreshControl.isRefreshing
         {
             refreshControl.beginRefreshing()
+            refreshControl.isEnabled = false
             self.Offset = 0
             self.loadingMore = false
             getJokes()
@@ -773,8 +774,8 @@ extension ViewController{
                 //self.refreshControl.endRefreshing()
                 self.pendingRequestgetJokes = false
                 self.refreshBtn.isEnabled = true
+                self.refreshControl.isEnabled = true
                 self.refreshControl.endRefreshing()
-                
                 self.container.removeFromSuperview()
             })
         }

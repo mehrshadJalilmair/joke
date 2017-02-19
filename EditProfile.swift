@@ -97,6 +97,11 @@ class EditProfile: UIViewController , UIImagePickerControllerDelegate , UINaviga
             self.errorDisplay.text = "حداقل سه کاراکتر!"
             return
         }
+        else if username.contains(" ")
+        {
+            self.errorDisplay.text = "کاراکتر فاصله وارد نکنید!"
+            return
+        }
         
         ActivityIndicatory(self.view)
         

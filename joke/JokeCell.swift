@@ -48,6 +48,8 @@ class JokeCell: FoldingCell {
     @IBOutlet weak var deleteBtn: UIButton!
     @IBOutlet weak var jokeImage: UIImageView!
     
+    @IBOutlet var justTextLabel: UILabel!
+    
     
     let defaults = UserDefaults.standard
     
@@ -154,6 +156,7 @@ class JokeCell: FoldingCell {
         }
         //date = date.stringByReplacingOccurrencesOfString("T", withString: "  ")
         
+        justTextLabel.text! = (joke.text as! String)
         fullJokeText.text! = (joke.text as! String)
         likeBtn.badgeString = "\(joke.like!)"
         visitedBtn.badgeString = "\(joke.view!)"
@@ -163,8 +166,17 @@ class JokeCell: FoldingCell {
             jokeOwnerImage.loadImageWithCasheWithUrl(image as! String)
         }
         
-        if let image = joke.imageName
+        if joke.imageName as! String == "" //no image
         {
+            jokeImage.isHidden = true
+            JokeText.isHidden = true
+            justTextLabel.isHidden = false
+        }
+        else if let image = joke.imageName
+        {
+            jokeImage.isHidden = false
+            JokeText.isHidden = false
+            justTextLabel.isHidden = true
             jokeImage.loadImageWithCasheWithUrl(image as! String)
         }
         
